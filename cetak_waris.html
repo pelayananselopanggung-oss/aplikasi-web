@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Cetak Surat Keterangan Waris
+</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link
+rel="stylesheet"
+href="bootstrap/css/bootstrap.min.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link
+rel="stylesheet"
+href="css/cetak_waris.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="print-area">
+
+<!--====================================================
+SURAT
+=====================================================-->
+
+<div class="container mb-3">
+
+<div class="card shadow">
+
+<div class="card-body p-5">
+
+<div class="text-center">
+
+    <h5
+    class="fw-bold text-uppercase"
+    style="
+        text-decoration:underline;
+        text-decoration-thickness:2px;
+        text-underline-offset:4px;
+        margin-bottom:20px;
+    ">
+
+    SURAT KETERANGAN AHLI WARIS
+
+</h5>
+
+    
+</div>
+
+
+<!--====================================================
+ISI SURAT
+=====================================================-->
+
+<p class="text-justify">
+
+    Yang bertanda tangan di bawah ini, kami ahli waris dari
+    Almarhum / Almarhumah
+    <strong id="namaPewaris"></strong>
+    menerangkan dengan sebenarnya bahwa
+    Almarhum / Almarhumah
+    <strong id="namaPewaris2"></strong>
+    telah meninggal dunia pada
+    <strong id="tanggalMeninggal"></strong>
+    di Desa Selopanggung Kecamatan Semen Kabupaten Kediri
+    sebagai tempat tinggal yang terakhir.
+
+</p>
+
+<p class="text-justify">
+
+    Selama hidupnya Almarhum / Almarhumah
+
+    <strong id="namaPewaris3"></strong>
+
+    kawin sah dengan seorang bernama
+
+    <strong id="namaPasangan"></strong>
+
+    <span id="kalimatPasangan"></span>
+
+    dan dalam perkawinan tersebut telah dilahirkan
+
+    <strong id="jumlahAhliWaris"></strong>
+
+    orang anak masing-masing bernama :
+
+</p>
+
+
+<table class="table table-bordered">
+
+    <thead>
+
+        <tr>
+
+            <th width="40">No</th>
+
+            <th>Nama</th>
+
+            <th width="170">NIK</th>
+
+            <th width="220">Tempat / Tanggal Lahir</th>
+
+            <th>Alamat</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="bodyAhliWaris">
+
+    </tbody>
+
+</table>
+
+
+<p class="text-justify">
+
+    Almarhum / Almarhumah
+
+    <strong id="namaPewaris4"></strong>
+
+    meninggalkan harta yang terletak di Desa Selopanggung Kecamatan Semen
+    Kabupaten Kediri berupa :
+
+</p>
+
+<div id="hartaWarisan">
+
+</div>
+
+<p class="text-justify mt-3">
+
+    Dengan demikian yang berhak atas warisan tersebut adalah :
+
+</p>
+
+
+<table class="table table-bordered">
+
+    <thead>
+
+        <tr>
+
+            <th width="40">No</th>
+
+            <th>Nama</th>
+
+            <th width="170">NIK</th>
+
+            <th width="220">Tempat / Tanggal Lahir</th>
+
+            <th>Alamat</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="bodyAhliWaris2">
+
+    </tbody>
+
+</table>
+
+
+<p class="text-justify">
+
+    Demikian Surat Keterangan Waris ini kami buat dengan
+    sebenar-benarnya dengan penuh tanggung jawab dan kami
+    bersedia untuk mengangkat sumpah apabila diperlukan.
+    Apabila ternyata surat keterangan waris ini tidak benar,
+    kami bersedia dituntut di hadapan pihak-pihak yang
+    berwenang.
+
+</p>
+
+
+<!--====================================================
+SAKSI & AHLI WARIS
+=====================================================-->
+
+<div class="row mt-4">
+
+    <!--==============================================
+    SAKSI
+    ===============================================-->
+
+    <div class="col-md-6">
+
+        <h6 class="fw-bold text-center mb-2">
+
+            SAKSI - SAKSI
+
+        </h6>
+
+        <table class="table table-borderless table-sm">
+
+            <tr>
+
+                <td colspan="3">
+
+                    <strong>1.</strong>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td width="90">
+
+                    Nama
+
+                </td>
+
+                <td width="10">
+
+                    :
+
+                </td>
+
+                <td id="namaSaksi1"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Umur
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="umurSaksi1"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Pekerjaan
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="pekerjaanSaksi1"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Alamat
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="alamatSaksi1"></td>
+
+            </tr>
+            <tr>
+
+    <td>
+
+        TTD
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td>
+
+        ....................
+
+    </td>
+
+</tr>
+
+        </table>
+
+        <br>
+
+        <table class="table table-borderless table-sm">
+
+            <tr>
+
+                <td colspan="3">
+
+                    <strong>2.</strong>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td width="90">
+
+                    Nama
+
+                </td>
+
+                <td width="10">
+
+                    :
+
+                </td>
+
+                <td id="namaSaksi2"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Umur
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="umurSaksi2"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Pekerjaan
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="pekerjaanSaksi2"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Alamat
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="alamatSaksi2"></td>
+
+            </tr>
+            <tr>
+
+    <td>
+
+        TTD
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td>
+
+        ....................
+
+    </td>
+
+</tr>
+
+        </table>
+
+    </div>
+
+
+    <!--==============================================
+    PARA AHLI WARIS
+    ===============================================-->
+
+    <div class="col-md-6">
+
+        <h6 class="fw-bold text-center mb-3">
+
+            PARA AHLI WARIS
+
+        </h6>
+
+        <div id="ttdAhliWaris">
+
+            <!-- Dibuat dinamis oleh preview_waris.js -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--====================================================
+PENGESAHAN
+=====================================================-->
+
+<div class="text-center mt-1 mb-1">
+
+    <strong>
+
+        Mengetahui,
+
+    </strong>
+
+</div>
+
+
+<div class="row">
+
+    <!--==============================================
+    CAMAT
+    ===============================================-->
+
+    <div class="col-md-6 text-center">
+
+        <table class="table table-borderless table-sm mb-1">
+
+            <tr>
+
+                <td width="90">
+
+                    Tanggal
+
+                </td>
+
+                <td width="15">
+
+                    :
+
+                </td>
+
+                <td>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Nomor
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <div>
+
+            CAMAT SEMEN
+
+        </div>
+
+        <br><br><br>
+        <div>
+
+            (........................................)
+
+        </div>
+
+    </div>
+
+
+    <!--==============================================
+    KEPALA DESA
+    ===============================================-->
+
+    <div class="col-md-6 text-center">
+
+        <table class="table table-borderless table-sm mb-1">
+
+            <tr>
+
+                <td width="90">
+
+                    Tanggal
+
+                </td>
+
+                <td width="15">
+
+                    :
+
+                </td>
+
+                <td id="tanggalSurat">
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    Nomor
+
+                </td>
+
+                <td>
+
+                    :
+
+                </td>
+
+                <td id="nomorSuratFooter">
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <div id="jabatanTtd">
+
+            KEPALA DESA SELOPANGGUNG
+
+        </div>
+
+        <br><br><br>
+
+        <div>
+
+            <strong id="namaPejabat"></strong>
+
+        </div>
+
+        <div id="nipPejabat">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- QR CODE -->
+<!-- ================================= -->
+
+<div id="qrContainer">
+
+    <img
+        id="imgQR"
+        src=""
+        alt="QR Verifikasi">
+
+    <div
+        id="offlineQR"
+        class="offlineQR">
+    </div>
+
+    <div class="qrText">
+        QR Verifikasi Keaslian Surat
+    </div>
+
+    <div
+        id="offlineInfo"
+        class="offlineInfo">
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="no-print">
+
+    <button
+        class="btn btn-success"
+        onclick="cetakSurat()">
+
+        🖨 Cetak
+
+    </button>
+
+    
+<div class="no-print" style="margin-bottom:10px;color:#d9534f;">
+    <strong>Catatan:</strong> Agar hasil PDF rapi, pada dialog Cetak nonaktifkan
+    <strong>Headers and footers</strong>, lalu pilih <strong>Save as PDF</strong>.
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="js/config.js"></script>
+
+<script src="js/tandatangan.js"></script>
+
+<script src="js/cetak_waris.js"></script>
+
+
+</body>
+
+
+</html>
+

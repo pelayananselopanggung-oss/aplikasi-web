@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>Pengaturan Tanda Tangan</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+        href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="css/pengaturan_ttd.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- Judul -->
+
+    <div class="card shadow mb-4">
+
+        <div class="card-body">
+
+            <h3 class="mb-1">
+
+                <i class="fa-solid fa-signature text-success"></i>
+
+                Pengaturan Tanda Tangan
+
+            </h3>
+
+            <small class="text-muted">
+
+                Pengaturan pejabat penandatangan surat.
+
+            </small>
+
+        </div>
+
+    </div>
+
+    <!-- Form -->
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- Nama Kades -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Nama Kepala Desa
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="namaKades"
+                        class="form-control">
+
+                </div>
+
+                <!-- NIP Kades -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        NIP Kepala Desa
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nipKades"
+                        class="form-control">
+
+                </div>
+
+                <!-- Nama Sekdes -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Nama Sekretaris Desa
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="namaSekdes"
+                        class="form-control">
+
+                </div>
+
+                <!-- NIP Sekdes -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        NIP Sekretaris Desa
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nipSekdes"
+                        class="form-control">
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <label class="form-label">
+
+                Penandatangan Surat
+
+            </label>
+
+            <div class="form-check">
+
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="status"
+                    id="statusKades"
+                    value="KADES">
+
+                <label
+                    class="form-check-label"
+                    for="statusKades">
+
+                    Kepala Desa
+
+                </label>
+
+            </div>
+
+            <div class="form-check mb-4">
+
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="status"
+                    id="statusSekdes"
+                    value="SEKDES">
+
+                <label
+                    class="form-check-label"
+                    for="statusSekdes">
+
+                    a.n. Kepala Desa (Sekretaris Desa)
+
+                </label>
+
+            </div>
+
+            <div class="alert alert-info">
+
+                <b>Preview</b>
+
+                <hr>
+
+                <pre id="previewTtd" class="mb-0"></pre>
+
+            </div>
+
+            <div class="d-flex justify-content-between">
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="kembali()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Kembali
+
+                </button>
+
+                <button
+                    class="btn btn-success"
+                    onclick="simpanTandaTangan()">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Javascript -->
+<script src="js/config.js"></script>
+<script src="js/pengaturan_ttd.js"></script>
+
+</body>
+
+</html>

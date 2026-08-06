@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Surat Keterangan</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/keterangan.css">
+
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- NAVBAR -->
+<!-- ================================= -->
+
+<nav class="navbar navbar-dark bg-success shadow">
+
+<div class="container-fluid">
+
+<button
+class="btn btn-light"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+</button>
+
+<span
+class="navbar-brand mx-auto"
+id="judulHalaman">
+
+SURAT KETERANGAN
+
+</span>
+
+</div>
+
+</nav>
+
+<!-- ================================= -->
+<!-- IDENTITAS -->
+<!-- ================================= -->
+
+<div class="container mt-3">
+
+<div class="card shadow">
+
+<div class="card-header bg-success text-white">
+
+<b>IDENTITAS PEMOHON</b>
+
+</div>
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label>NIK</label>
+
+<input
+type="text"
+id="nik"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Nama</label>
+
+<input
+type="text"
+id="nama"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Tempat Lahir</label>
+
+<input
+type="text"
+id="tempatlahir"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Tanggal Lahir</label>
+
+<input
+type="date"
+id="tanggallahir"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Jenis Kelamin</label>
+
+<input
+type="text"
+id="jk"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Agama</label>
+
+<input
+type="text"
+id="agama"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Status Perkawinan</label>
+
+<input
+type="text"
+id="sp"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Pekerjaan</label>
+
+<input
+type="text"
+id="pekerjaan"
+class="form-control"
+readonly>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- ALAMAT -->
+<!-- ================================= -->
+
+<div class="container mt-3">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<b>ALAMAT</b>
+
+</div>
+
+<div class="card-body">
+
+<div class="mb-3">
+
+<label>Alamat</label>
+
+<textarea
+id="alamat"
+class="form-control"
+rows="2"
+readonly></textarea>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-2 mb-3">
+
+<label>RT</label>
+
+<input
+type="text"
+id="rt"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-2 mb-3">
+
+<label>RW</label>
+
+<input
+type="text"
+id="rw"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<label>Desa</label>
+
+<input
+type="text"
+id="desa"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<label>Kecamatan</label>
+
+<input
+type="text"
+id="kecamatan"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Kabupaten</label>
+
+<input
+type="text"
+id="kabupaten"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Provinsi</label>
+
+<input
+type="text"
+id="provinsi"
+class="form-control"
+readonly>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- DATA SURAT -->
+<!-- ================================= -->
+
+<div class="container mt-3">
+
+<div class="card shadow">
+
+<div class="card-header bg-warning">
+
+<b id="judulDataSurat">
+
+DATA SURAT
+
+</b>
+
+</div>
+
+<div class="card-body">
+
+<div
+id="groupDesil"
+style="display:none;">
+
+<div class="mb-3">
+
+<label>Desil</label>
+
+<input
+type="text"
+id="desil"
+class="form-control"
+placeholder="Contoh : P1 / P2 / P3">
+
+</div>
+
+</div>
+
+<div class="row" id="groupUsaha" style="display:none;">
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">Jenis Usaha</label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="jenisUsaha"
+            placeholder="Contoh : Toko Kelontong">
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">Letak Usaha</label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="letakUsaha"
+            placeholder="Alamat usaha">
+
+    </div>
+
+</div>
+
+<div class="row" id="groupPenghasilan" style="display:none;">
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">Jumlah Penghasilan / Bulan</label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="penghasilan"
+            placeholder="Rp 0"
+            oninput="formatRupiah(this)">
+
+    </div>
+
+</div>
+
+<div class="row" id="groupKehilangan" style="display:none;">
+
+    <div class="col-12 mb-3">
+
+        <label class="form-label">
+            Barang Yang Hilang
+        </label>
+
+        <div id="listBarang"></div>
+
+        <button
+            type="button"
+            class="btn btn-success mt-2"
+            onclick="tambahBarang()">
+
+            <i class="fa fa-plus"></i>
+            Tambah Barang
+
+        </button>
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Tempat Kehilangan
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="tempatHilang">
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Tanggal Kehilangan
+        </label>
+
+        <input
+            type="date"
+            class="form-control"
+            id="tanggalHilang">
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- SURAT KETERANGAN DINAMIS -->
+<!-- ================================= -->
+
+<div
+id="groupDinamis"
+style="display:none;">
+
+    <div class="mb-3">
+
+        <label class="form-label">
+
+            Isi Keterangan
+
+        </label>
+
+        <textarea
+            id="isiKeterangan"
+            class="form-control"
+            rows="6"
+            placeholder="Contoh :
+Orang tersebut benar-benar warga Desa Selopanggung.
+Orang tersebut berkelakuan baik.
+dst."></textarea>
+
+<small class="text-muted">
+Pisahkan setiap poin dengan menekan Enter. Setiap baris akan menjadi satu poin pada surat.
+</small>
+
+    </div>
+
+</div>
+
+ <div class="col-12 mb-3">
+
+                    <label class="form-label">Keperluan</label>
+
+                    <textarea
+                        id="keperluan"
+                        class="form-control"
+                        rows="3"></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="container mt-4 mb-5">
+
+<div class="row">
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-secondary w-100"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+Kembali
+
+</button>
+
+</div>
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-warning w-100"
+onclick="resetForm()">
+
+<i class="fa fa-rotate-left"></i>
+
+Reset
+
+</button>
+
+</div>
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-success w-100"
+onclick="previewSurat()">
+
+<i class="fa fa-file-lines"></i>
+
+Preview Surat
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- LOADING -->
+<!-- ================================= -->
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+<div class="spinner-border text-success">
+
+</div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/offline/db.js"></script>
+<script src="js/keterangan.js"></script>
+
+
+</body>
+</html>

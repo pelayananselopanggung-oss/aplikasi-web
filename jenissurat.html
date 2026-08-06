@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Jenis Surat</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jenissurat.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+NAVBAR
+=========================================== -->
+
+<nav class="navbar navbar-dark bg-success shadow">
+
+    <div class="container-fluid">
+
+        <button class="btn btn-light" onclick="kembali()">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+
+        <span class="navbar-brand mx-auto">
+            PILIH JENIS SURAT
+        </span>
+
+    </div>
+
+</nav>
+
+<!-- ==========================================
+DATA PEMOHON
+=========================================== -->
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-success text-white">
+
+            <b>DATA PEMOHON</b>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">NIK</label>
+                    <div id="nikPemohon">-</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">Nama</label>
+                    <div id="namaPemohon">-</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">Jenis Kelamin</label>
+                    <div id="jkPemohon">-</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">Pekerjaan</label>
+                    <div id="pekerjaanPemohon">-</div>
+                </div>
+
+                <div class="col-12">
+                    <label class="fw-bold">Alamat</label>
+                    <div id="alamatPemohon">-</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+SURAT KETERANGAN
+=========================================== -->
+
+<div class="container mt-4">
+
+    <h4 class="judul-kategori">
+        <i class="fa-solid fa-file-lines"></i>
+        Surat Keterangan
+    </h4>
+
+    <div class="row g-3">
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+          <div class="menu-card" onclick="pilihSurat('KETERANGAN','KETERANGAN')">
+
+           <i class="fa-solid fa-file-signature"></i>
+
+            <h5>Keterangan</h5>
+
+             <p>Surat Keterangan Umum</p>
+
+           </div>
+
+         </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KETERANGAN','SKTM')">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+                <h5>SKTM</h5>
+
+                <p>Surat Keterangan Tidak Mampu</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KETERANGAN','SKCK')">
+
+                <i class="fa-solid fa-address-card"></i>
+
+                <h5>SKCK</h5>
+
+                <p>Pengantar SKCK</p>
+
+            </div>
+
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KETERANGAN','USAHA')">
+
+                <i class="fa-solid fa-store"></i>
+
+                <h5>Usaha</h5>
+
+                <p>Surat Keterangan Usaha</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KETERANGAN','KEHILANGAN')">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h5>Kehilangan</h5>
+
+                <p>Surat Keterangan Kehilangan</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KETERANGAN','PENGHASILAN')">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h5>Penghasilan</h5>
+
+                <p>Surat Penghasilan</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+SURAT KHUSUS
+=========================================== -->
+
+<div class="container mt-5 mb-5">
+
+    <h4 class="judul-kategori">
+        <i class="fa-solid fa-folder-open"></i>
+        Surat Khusus
+    </h4>
+
+    <div class="row g-3">
+
+        
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('SKTM SISWA','SKTM SISWA')">
+
+                <i class="fa-solid fa-school"></i>
+
+                <h5>SKTM Siswa</h5>
+
+                <p>Keperluan Pendidikan</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KENDARAAN','KENDARAAN')">
+
+                <i class="fa-solid fa-motorcycle"></i>
+
+                <h5>Kendaraan</h5>
+
+                <p>Kepemilikan Kendaraan</p>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="menu-card" onclick="pilihSurat('KEMATIAN','KEMATIAN')">
+
+                <i class="fa-solid fa-hands-praying"></i>
+
+                <h5>Kematian</h5>
+
+                <p>Surat Keterangan Kematian</p>
+
+            </div>
+
+        </div>
+
+        
+
+<!-- ==========================================
+LOADING
+=========================================== -->
+
+<div id="loading" class="loading" style="display:none;">
+
+    <div class="spinner-border text-success"></div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/offline/db.js"></script>
+<script src="js/config.js"></script>
+<script src="js/jenissurat.js"></script>
+
+
+</body>
+</html>

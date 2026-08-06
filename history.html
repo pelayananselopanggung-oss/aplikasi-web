@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>
+
+Histori Agenda Surat
+
+</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link
+rel="stylesheet"
+href="bootstrap/css/bootstrap.min.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+body{
+
+    background:#f4f6f9;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:12px;
+
+}
+
+.table th{
+
+    white-space:nowrap;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+#loading{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,.6);
+
+    z-index:9999;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-success">
+
+<div class="container-fluid">
+
+<a
+class="navbar-brand"
+href="#">
+
+<i class="fa fa-folder-open"></i>
+
+Histori Agenda Surat
+
+</a>
+
+<button
+class="btn btn-light"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+Kembali
+
+</button>
+
+</div>
+
+</nav>
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <div class="row g-2 align-items-center">
+
+                <!-- Pencarian -->
+                <div class="col-lg-7 col-md-12">
+
+                    <input
+                        type="text"
+                        id="cari"
+                        class="form-control"
+                        placeholder="Cari Nomor Agenda, Nama, NIK atau Jenis Surat"
+                        onkeyup="cariAgenda()">
+
+                </div>
+
+                <!-- Tombol -->
+                <div class="col-lg-5 col-md-12">
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                        <button
+                            class="btn btn-success"
+                            onclick="loadAgenda()">
+
+                            <i class="fa fa-rotate-right"></i>
+                            Refresh
+
+                        </button>
+
+                        <button
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalTambahAgenda">
+
+                            <i class="fa fa-plus"></i>
+                            Tambah Agenda
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+<!-- =========================================
+     TABEL HISTORI
+========================================= -->
+
+<div class="table-responsive">
+
+<table
+class="table table-bordered table-hover align-middle"
+id="tblAgenda">
+
+<thead class="table-success">
+
+<tr>
+
+<th width="70">
+
+No
+
+</th>
+
+<th width="90">
+
+Agenda
+
+</th>
+
+<th>
+
+Nama
+
+</th>
+
+<th width="180">
+
+NIK
+
+</th>
+
+<th width="220">
+
+Jenis Surat
+
+</th>
+
+<th width="120">
+
+Tanggal
+
+</th>
+
+<th width="170">
+
+Aksi
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="dataAgenda">
+
+<tr>
+
+<td
+colspan="7"
+class="text-center text-muted">
+
+Memuat data...
+
+</td>
+
+</tr>
+
+
+<div class="modal fade"
+     id="modalTambahAgenda"
+     tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+
+                    Tambah Agenda
+
+                </h5>
+
+                <button
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="mb-2">
+
+                    <label>Nama</label>
+
+                    <input
+                        type="text"
+                        id="namaAgenda"
+                        class="form-control">
+
+                </div>
+
+                <div class="mb-2">
+
+                    <label>NIK</label>
+
+                    <input
+                        type="text"
+                        id="nikAgenda"
+                        class="form-control">
+
+                </div>
+
+                <div class="mb-2">
+
+                    <label>Jenis Surat</label>
+
+                    <input
+                        type="text"
+                        id="jenisAgenda"
+                        class="form-control">
+
+                </div>
+
+                <div class="mb-2">
+
+                    <label>Tanggal</label>
+
+                    <input
+                        type="date"
+                        id="tanggalAgenda"
+                        class="form-control">
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Batal
+
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="tambahAgenda()">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================
+LOADING
+========================================= -->
+
+<div id="loading">
+
+<div
+class="spinner-border text-success"
+role="status">
+
+</div>
+
+</div>
+
+<!-- =========================================
+JAVASCRIPT
+========================================= -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/offline/db.js"></script>
+<script src="js/history.js"></script>
+
+</body>
+
+</html>
+

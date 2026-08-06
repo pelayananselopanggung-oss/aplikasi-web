@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Riwayat Permohonan Nikah</title>
+
+<link
+rel="stylesheet"
+href="bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link
+rel="stylesheet"
+href="css/riwayat_nikah.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+LOADING
+========================================== -->
+
+<div id="loading" style="display:none;">
+
+    <div class="spinner-border text-success"></div>
+
+</div>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<div class="header">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-8">
+
+                <h3>
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    RIWAYAT PERMOHONAN NIKAH
+
+                </h3>
+
+                <small>
+
+                    Desa Selopanggung
+
+                </small>
+
+            </div>
+
+            <div class="col-md-4 text-end">
+
+                <button
+
+                    class="btn btn-success"
+
+                    onclick="kembali()">
+
+                    <i class="fa fa-arrow-left"></i>
+
+                    Dashboard
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+CONTENT
+========================================== -->
+
+<div class="container mt-4">
+
+    <!-- ================================ -->
+    <!-- PENCARIAN -->
+    <!-- ================================ -->
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-10">
+
+                    <input
+
+                        type="text"
+
+                        id="cari"
+
+                        class="form-control"
+
+                        placeholder="Cari Nomor Agenda / Nama Suami / Nama Istri"
+
+                        onkeyup="cariData()">
+
+                </div>
+
+                <div class="col-md-2 d-grid">
+
+                    <button
+
+                        class="btn btn-success"
+
+                        onclick="cariData()">
+
+                        <i class="fa fa-search"></i>
+
+                        Cari
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================================ -->
+    <!-- TABEL -->
+    <!-- ================================ -->
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th width="60">No</th>
+
+                    <th width="120">Agenda</th>
+
+                    <th>Calon Suami</th>
+
+                    <th>Calon Istri</th>
+
+                    <th width="130">Tanggal</th>
+
+                    <th width="180">Aksi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="dataRiwayat">
+
+                <tr>
+
+                    <td
+                    colspan="6"
+                    class="text-center">
+
+                        Belum ada data.
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+SCRIPT
+========================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/offline/db.js"></script>
+<script src="js/offline/queue.js"></script>
+<script src="js/offline/replay.js"></script>
+<script src="js/offline/sync.js"></script>
+<script src="js/offline/network.js"></script>
+<script src="js/offline/register-sw.js"></script>
+
+<script src="js/riwayat_nikah.js"></script>
+
+</body>
+
+</html>

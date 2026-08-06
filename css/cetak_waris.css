@@ -1,0 +1,468 @@
+
+/*======================================================
+BODY
+======================================================*/
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    background:#efebe9;
+
+    font-family:"Times New Roman",serif;
+
+    color:#000;
+
+    font-size:12pt;
+
+}
+
+
+
+
+/*======================================================
+UKURAN KERTAS F4
+======================================================*/
+
+.card{
+
+    width:210mm;
+
+    min-height:330mm;
+
+    margin:auto;
+
+    border:none;
+
+    border-radius:0;
+
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+
+}
+
+.card-body{
+
+    width:100%;
+
+    min-height:330mm;
+
+    padding:15mm 15mm 15mm 15mm;
+
+    box-sizing:border-box;
+
+    background:#ffffff;
+
+}
+
+
+/*======================================================
+JUDUL SURAT
+======================================================*/
+
+h5{
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    text-decoration:underline;
+
+    text-decoration-thickness:2px;
+
+    text-underline-offset:4px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/*======================================================
+PARAGRAF
+======================================================*/
+
+p{
+
+    text-align:justify;
+
+    text-indent:45px;
+
+    line-height:1;
+
+    margin-bottom:6px;
+
+    font-size:11pt;
+
+}
+
+
+/*======================================================
+TABEL
+======================================================*/
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    font-size:11pt;
+
+    margin-top:8px;
+
+    margin-bottom:8px;
+
+}
+
+.table th,
+
+.table td{
+
+    border:none !important;
+
+    padding:1px;
+
+    vertical-align:top;
+
+}
+
+.table thead th{
+
+    background:none !important;
+
+    color:none !important;;
+
+    text-align:center;
+
+}
+
+
+/*======================================================
+TABLE BORDERLESS
+======================================================*/
+
+.table-borderless td{
+
+    border:none !important;
+
+    padding:1px 1px;
+
+    font-size:11pt;
+
+    vertical-align:top;
+
+}
+
+
+
+/*======================================================
+HARTA WARISAN
+======================================================*/
+
+#hartaWarisan{
+
+    font-size:11pt;
+
+    line-height:1;
+
+    white-space:pre-wrap;
+
+    margin-bottom:5px;
+
+}
+
+
+/*======================================================
+JUDUL BAGIAN
+======================================================*/
+
+h6{
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+/*======================================================
+TTD AHLI WARIS
+======================================================*/
+
+#ttdAhliWaris{
+
+    font-size:11pt;
+
+}
+
+.item-ahli-waris{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+}
+
+.item-ahli-waris .nomor{
+
+    width:35px;
+
+}
+
+.item-ahli-waris .nama{
+
+    width:220px;
+
+    white-space:nowrap;
+
+}
+
+.item-ahli-waris .garis{
+
+    flex:1;
+
+    white-space:nowrap;
+
+}
+
+
+/*======================================================
+PENGESAHAN
+======================================================*/
+
+#jabatan{
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    font-size:11pt;
+
+}
+
+#namaKepalaDesa{
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    text-decoration:underline;
+
+    font-size:11pt;
+
+}
+
+#nipKepalaDesa{
+
+    font-size:11pt;
+
+}
+
+/*======================================================
+QR CONTAINER
+======================================================*/
+
+#qrContainer{
+
+    position:absolute;
+
+    left:170mm;
+
+    bottom:1mm;
+
+    width:30mm;
+
+    text-align:center;
+
+}
+
+/*======================================================
+QR ONLINE
+======================================================*/
+
+#imgQR{
+
+    width:25mm;
+    height:25mm;
+
+    display:block;
+    margin:auto;
+
+}
+
+/*======================================================
+QR OFFLINE
+======================================================*/
+
+.offlineQR{
+
+    display:none;
+
+    width:30mm;
+    height:30mm;
+
+    margin:auto;
+
+}
+
+.offlineQR canvas{
+
+    width:100mm !important;
+    height:100mm !important;
+
+}
+
+/*======================================================
+KETERANGAN QR
+======================================================*/
+
+.qrText{
+
+    margin-top:2mm;
+
+    font-size:8pt;
+
+    line-height:1.2;
+
+}
+
+.offlineInfo{
+
+    margin-top:2mm;
+
+    font-size:7pt;
+
+    line-height:1.2;
+
+    color:#b00020;
+
+}
+
+
+/*======================================================
+BUTTON PRINT
+======================================================*/
+
+.no-print{
+
+    text-align:center;
+
+}
+
+
+
+.btn{
+
+    min-width:130px;
+
+    font-weight:bold;
+
+    border-radius:8px;
+
+}
+
+
+
+/*======================================================
+PRINT
+======================================================*/
+
+@page{
+
+    size:210mm 330mm;
+
+    margin:3mm;
+
+}
+
+@media print{
+
+    html,
+    body{
+
+        width:210mm;
+        height:330mm;
+
+        margin:0;
+        padding:0;
+
+        background:#fff;
+
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+
+    }
+
+    .container{
+
+        width:100% !important;
+        max-width:none !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+    }
+
+    .card{
+
+        width:204mm !important;
+
+        min-height:324mm !important;
+
+        margin:0 auto !important;
+
+        border:none !important;
+        border-radius:0 !important;
+        box-shadow:none !important;
+
+    }
+
+    .card-body{
+
+        width:auto !important;
+
+        min-height:auto !important;
+
+        padding:8mm 10mm 8mm 10mm !important;
+
+        margin:0 !important;
+
+        box-sizing:border-box;
+
+    }
+
+    .row{
+
+        display:flex !important;
+
+        flex-wrap:nowrap !important;
+
+    }
+
+    .col-md-6{
+
+        width:50% !important;
+        flex:0 0 50% !important;
+        max-width:50% !important;
+
+    }
+
+    .no-print{
+
+        display:none !important;
+
+    }
+
+}

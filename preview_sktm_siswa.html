@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>
+Preview Surat Keterangan Tidak Mampu
+</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link
+href="bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="css/preview.css">
+
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- NAVBAR -->
+<!-- ================================= -->
+
+<nav class="navbar navbar-dark bg-success shadow no-print">
+
+<div class="container-fluid">
+
+<button
+class="btn btn-light btn-sm"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+</button>
+
+<span class="navbar-brand mx-auto">
+
+PREVIEW SURAT KETERANGAN TIDAK MAMPU
+
+</span>
+
+</div>
+
+</nav>
+
+<!-- ================================= -->
+<!-- SURAT -->
+<!-- ================================= -->
+
+<div class="container my-4">
+
+<div class="card shadow">
+
+<div class="card-body p-5">
+
+<!-- ================================= -->
+<!-- KOP SURAT -->
+<!-- ================================= -->
+
+<div class="row align-items-center mb-3">
+
+<div class="col-2 text-center">
+
+<img
+src="assets/logo_kediri.png"
+style="width:90px;">
+
+</div>
+
+<div class="col-10 text-center">
+
+<div style="font-size:24px;">
+
+PEMERINTAH KABUPATEN KEDIRI
+
+</div>
+
+<div style="font-size:24px;">
+
+KECAMATAN SEMEN
+
+</div>
+
+<div
+style="
+font-size:28px;
+font-weight:bold;
+">
+
+DESA SELOPANGGUNG
+
+</div>
+
+<div style="font-size:15px;">
+
+Jalan Simpang Tiga No.1
+Desa Selopanggung
+Kecamatan Semen
+Kabupaten Kediri
+
+</div>
+
+</div>
+
+</div>
+
+<hr
+style="
+border:2px solid #000;
+opacity:1;
+margin-top:0;
+">
+
+<!-- ================================= -->
+<!-- JUDUL -->
+<!-- ================================= -->
+
+<div class="text-center mt-4">
+
+<h4
+style="
+font-weight:bold;
+text-decoration:underline;
+">
+
+SURAT KETERANGAN TIDAK MAMPU
+
+</h4>
+
+<div>
+
+Nomor :
+
+<b id="nomorSurat">
+
+470/.../418.60.04/....
+
+</b>
+
+</div>
+
+</div>
+
+<br>
+
+<p style="text-align:justify;">
+
+Yang bertanda tangan di bawah ini kami
+Kepala Desa Selopanggung
+menerangkan bahwa :
+
+</p>
+
+<!-- ================================= -->
+<!-- IDENTITAS ORANG TUA -->
+<!-- ================================= -->
+
+<table
+class="table table-borderless"
+style="
+margin-left:50px;
+margin-bottom:20px;
+">
+
+<tr>
+
+<td width="230">
+
+Nama
+
+</td>
+
+<td width="20">
+
+:
+
+</td>
+
+<td id="namaOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+NIK
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="nikOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tempat, Tanggal Lahir
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="ttlOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Jenis Kelamin
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="jkOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Agama
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="agamaOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pekerjaan
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="pekerjaanOrtu"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Alamat
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="alamatOrtu"></td>
+
+</tr>
+
+</table>
+
+<p style="text-align:justify;">
+
+Adalah benar-benar Orang Tua / Wali dari :
+
+</p>
+
+<!-- ================================= -->
+<!-- IDENTITAS SISWA -->
+<!-- ================================= -->
+
+<table
+class="table table-borderless"
+style="
+margin-left:50px;
+margin-bottom:20px;
+">
+
+<tr>
+
+<td width="230">
+
+Nama
+
+</td>
+
+<td width="20">
+
+:
+
+</td>
+
+<td id="namaSiswa"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+NIK
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="nikSiswa"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tempat, Tanggal Lahir
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="ttlSiswa"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Jenis Kelamin
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="jkSiswa"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Nama Sekolah
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="sekolah"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Kelas
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="kelas"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+NISN
+
+</td>
+
+<td>
+
+:
+
+</td>
+
+<td id="nisn"></td>
+
+</tr>
+
+</table>
+
+<!-- ================================= -->
+<!-- KETERANGAN -->
+<!-- ================================= -->
+
+<table
+class="table table-borderless"
+style="margin-top:20px;">
+
+<tr>
+
+<td width="230" valign="top">
+
+Keterangan
+
+</td>
+
+<td width="20" valign="top">
+
+:
+
+</td>
+
+<td style="text-align:justify;">
+
+Orang tersebut di atas benar-benar penduduk
+Desa Selopanggung Kecamatan Semen Kabupaten Kediri,
+dan termasuk dalam keluarga tidak mampu
+serta berada di tingkat Desil
+<b id="desil"></b>
+pada
+<b>Data Tunggal Sosial Ekonomi Nasional (DTSEN).</b>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- ================================= -->
+<!-- KEPERLUAN -->
+<!-- ================================= -->
+
+<table
+class="table table-borderless"
+style="
+margin-top:20px;
+">
+
+<tr>
+
+<td width="230" valign="top">
+
+Keperluan
+
+</td>
+
+<td width="20" valign="top">
+
+:
+
+</td>
+
+<td style="text-align:justify;">
+
+Surat Keterangan ini dibuat untuk persyaratan
+
+<br><br>
+
+<b id="keperluan"></b>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- ================================= -->
+<!-- PENUTUP -->
+<!-- ================================= -->
+
+<p
+style="
+text-align:justify;
+text-indent:40px;
+">
+
+Demikian Surat Keterangan ini kami buat
+dengan sebenarnya agar dapat dipergunakan
+sebagaimana mestinya.
+
+</p>
+
+<!-- ================================= -->
+<!-- QR DAN TANDA TANGAN -->
+<!-- ================================= -->
+
+<div class="row mt-5">
+
+    <div class="col-6 text-center">
+
+        Tanda Tangan Yang Bersangkutan
+
+        <br><br><br><br><br>
+
+        <b><u id="namaTtd"></u></b>
+
+    </div>
+
+    <div class="col-6 text-center">
+
+    Selopanggung,
+    <span id="tanggalSurat"></span>
+
+    <br>
+
+    <div id="jabatanTtd">
+
+        KEPALA DESA SELOPANGGUNG
+
+    </div>
+
+    <br><br><br><br><br>
+
+    <b>
+        <u id="namaPejabat"></u>
+    </b>
+
+    <div id="nipPejabat"></div>
+
+</div>
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="d-flex justify-content-center gap-2 mt-4 no-print">
+
+    <button
+        id="btnEdit"
+        class="btn btn-warning"
+        onclick="kembali()">
+
+        <i class="fa fa-pen"></i>
+
+        Edit
+
+    </button>
+
+    <button
+        id="btnSimpan"
+        class="btn btn-success"
+        onclick="simpanSurat()">
+
+        <i class="fa fa-save"></i>
+
+        Simpan
+
+    </button>
+
+    <button
+        id="btnUpdate"
+        class="btn btn-primary"
+        onclick="updateSurat()"
+        style="display:none;">
+
+        <i class="fa fa-refresh"></i>
+
+        Update
+
+    </button>
+
+    <button
+        id="btnCetak"
+        class="btn btn-danger"
+        onclick="bukaCetak()"
+        style="display:none;">
+
+        <i class="fa fa-print"></i>
+
+        Cetak
+
+    </button>
+
+</div>
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
+
+<div class="text-center mt-5 text-muted no-print">
+
+    <hr>
+
+    <small>
+
+        Sistem Pelayanan Administrasi Desa Selopanggung
+
+        <br>
+
+        Preview Surat Keterangan Tidak Mampu
+
+    </small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- LOADING -->
+<!-- ================================= -->
+
+<div
+    id="loading"
+    class="loading"
+    style="display:none;">
+
+    <div class="spinner-border text-success">
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- BOOTSTRAP -->
+<!-- ================================= -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ================================= -->
+<!-- CONFIG -->
+<!-- ================================= -->
+
+<script src="js/config.js"></script>
+<script src="js/tandatangan.js"></script>
+
+<!-- ================================= -->
+<!-- OFFLINE -->
+<!-- ================================= -->
+
+<script src="js/offline/db.js"></script>
+<script src="js/offline/queue.js"></script>
+<script src="js/offline/replay.js"></script>
+<script src="js/offline/sync.js"></script>
+<script src="js/offline/network.js"></script>
+
+<!-- ================================= -->
+<!-- PREVIEW SKTM SISWA -->
+<!-- ================================= -->
+<script src="js/preview_sktm_siswa.js"></script>
+
+</body>
+
+</html>

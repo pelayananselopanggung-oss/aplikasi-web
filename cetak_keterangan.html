@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Cetak Surat Keterangan
+</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link
+rel="stylesheet"
+href="bootstrap/css/bootstrap.min.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link
+rel="stylesheet"
+href="css/cetak.css">
+
+</head>
+
+<body>
+
+<div class="halaman">
+
+<!-- ================================= -->
+<!-- KOP SURAT -->
+<!-- ================================= -->
+
+<div class="kop">
+
+    <img
+        src="assets/logo_kediri.png"
+        class="logo">
+
+    <div class="header">
+
+        <div class="atas1">
+
+            PEMERINTAH KABUPATEN KEDIRI
+
+        </div>
+
+        <div class="atas2">
+
+            KECAMATAN SEMEN
+
+        </div>
+
+        <div class="atas3">
+
+            DESA SELOPANGGUNG
+
+        </div>
+
+        <div class="atas4">
+
+            Jalan Simpang Tiga No.1
+            Desa Selopanggung
+            Kecamatan Semen
+            Kabupaten Kediri
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- JUDUL -->
+<!-- ================================= -->
+
+<div class="judul">
+
+    <div class="judul1">
+
+        <span id="judulSurat"></span>
+
+    </div>
+
+    <div class="nomor">
+
+        Nomor :
+
+        <span id="nomorSurat"></span>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- ISI -->
+<!-- ================================= -->
+
+<div class="isi">
+
+<p>
+
+Yang bertanda tangan di bawah ini
+Kepala Desa Selopanggung
+Kecamatan Semen
+Kabupaten Kediri
+menerangkan bahwa :
+
+</p>
+
+<!-- ================================= -->
+<!-- IDENTITAS -->
+<!-- ================================= -->
+
+<br>
+
+<table class="tableData">
+
+<tr>
+
+    <td width="220">
+
+        Nama
+
+    </td>
+
+    <td width="20">
+
+        :
+
+    </td>
+
+    <td id="nama"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        NIK
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="nik"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Tempat / Tanggal Lahir
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="ttl"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Jenis Kelamin
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="jk"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Agama
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="agama"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Status Perkawinan
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="sp"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Pekerjaan
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="pekerjaan"></td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        Alamat
+
+    </td>
+
+    <td>
+
+        :
+
+    </td>
+
+    <td id="alamat"></td>
+
+</tr>
+
+</table>
+
+<br>
+
+<p>
+
+Berdasarkan data dan keadaan yang sebenarnya,
+dengan ini menerangkan bahwa :
+
+</p>
+
+<!--======================================
+KETERANGAN DINAMIS
+=======================================-->
+
+<div
+    id="keteranganDinamis"
+    style="display:none;">
+</div>
+
+<!--======================================
+KETERANGAN
+=======================================-->
+
+<ol>
+
+    <li>
+
+        Orang tersebut benar-benar warga
+        Desa Selopanggung,
+        Kecamatan Semen,
+        Kabupaten Kediri.
+
+    </li>
+
+    <br>
+
+    <li id="keterangan">
+
+    </li>
+
+</ol>
+
+<br>
+
+<p>
+
+Surat keterangan ini dipergunakan untuk :
+
+</p>
+
+<p
+id="keperluan"
+style="
+font-weight:bold;
+text-align:left;
+margin-top:15px;
+margin-bottom:20px;
+">
+
+</p>
+
+<p style="text-align:justify;">
+
+Demikian surat keterangan ini dibuat
+dengan sebenarnya agar dapat dipergunakan
+sebagaimana mestinya.
+
+</p>
+
+</div>
+
+<!-- ================================= -->
+<!-- TANDA TANGAN -->
+<!-- ================================= -->
+
+<div class="row mt-5">
+
+    <div class="col-6 text-center">
+
+        Tanda Tangan Yang Bersangkutan
+
+        <br><br><br><br><br>
+
+        <b><u id="namaTtd"></u></b>
+
+    </div>
+
+    <div class="col-6 text-center">
+
+    Selopanggung,
+    <span id="tanggalSurat"></span>
+
+    <br>
+
+    <div id="jabatanTtd">
+
+        KEPALA DESA SELOPANGGUNG
+
+    </div>
+
+    <br><br><br><br><br>
+
+    <b>
+        <u id="namaPejabat"></u>
+    </b>
+
+    <div id="nipPejabat"></div>
+
+</div>
+
+<!-- ================================= -->
+<!-- QR CODE -->
+<!-- ================================= -->
+
+<div id="qrContainer">
+
+    <img
+        id="imgQR"
+        src=""
+        alt="QR Verifikasi">
+
+    <div
+        id="offlineQR"
+        class="offlineQR">
+    </div>
+
+    <div class="qrText">
+        QR Verifikasi Keaslian Surat
+    </div>
+
+    <div
+        id="offlineInfo"
+        class="offlineInfo">
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="no-print text-center mt-4">
+
+    <button
+        class="btn btn-success"
+        onclick="cetakSurat()">
+
+        <i class="fa fa-print"></i>
+
+        Cetak
+
+    </button>
+
+   
+    <div
+        style="
+        margin-top:15px;
+        color:#d9534f;
+        ">
+
+        <b>Catatan :</b>
+
+        Agar hasil PDF rapi,
+        pada dialog Cetak nonaktifkan
+        <b>Headers and Footers</b>,
+        kemudian pilih
+        <b>Save as PDF</b>.
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- LOADING -->
+<!-- ================================= -->
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+    <div class="spinner-border text-success">
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- SCRIPT -->
+<!-- ================================= -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/libs/qrcode.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/tandatangan.js"></script>
+
+
+<script src="js/cetak_keterangan.js"></script>
+
+
+</body>
+
+</html>

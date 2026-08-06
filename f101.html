@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Formulir F-1.01</title>
+
+    <link rel="stylesheet"
+          href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="css/f.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">
+
+                FORMULIR F-1.01
+
+            </h4>
+
+            <small>
+
+                Biodata Keluarga
+
+            </small>
+
+        </div>
+
+        <div class="card-body">
+
+            <!-------------------------------------------------->
+            <!-- NOMOR KK -->
+            <!-------------------------------------------------->
+
+            <div class="row mb-3">
+
+                <div class="col-md-8">
+
+                    <label class="form-label">
+
+                        Nomor Kartu Keluarga
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nokk"
+                        class="form-control"
+                        maxlength="16"
+                        placeholder="Masukkan Nomor KK">
+
+                </div>
+
+                <div class="col-md-4 d-grid">
+
+                    <label>&nbsp;</label>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="cariKK()">
+
+                        <i class="fa fa-search"></i>
+
+                        Cari KK
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------->
+            <!-- KEPALA KELUARGA -->
+            <!-------------------------------------------------->
+
+            <div class="card mb-3">
+
+                <div class="card-header">
+
+                    Data Kepala Keluarga
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <label>Nama Kepala Keluarga</label>
+
+                            <input
+                                id="namaKK"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label>Alamat</label>
+
+                            <input
+                                id="alamat"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-2">
+
+                            <label>RT</label>
+
+                            <input
+                                id="rt"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <label>RW</label>
+
+                            <input
+                                id="rw"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label>Desa</label>
+
+                            <input
+                                id="desa"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label>Kecamatan</label>
+
+                            <input
+                                id="kecamatan"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------->
+            <!-- ANGGOTA KK -->
+            <!-------------------------------------------------->
+
+            <div class="card mb-3">
+
+                <div class="card-header">
+
+                    Anggota Keluarga
+
+                </div>
+
+                <div class="card-body table-responsive">
+
+                    <table
+                        <table class="table table-bordered table-striped table-keluarga">
+
+                        <thead>
+
+                        <tr>
+
+                            <th>No</th>
+
+                            <th>NIK</th>
+
+                            <th>Nama</th>
+
+                            <th>TTL</th>
+
+                            <th>JK</th>
+
+                            <th>Agama</th>
+
+                            <th>SHDK</th>
+
+                            <th>Pendidikan</th>
+
+                            <th>Pekerjaan</th>
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody id="dataKK">
+
+                        <tr>
+
+                            <td colspan="9"
+                                class="text-center">
+
+                                Belum ada data.
+
+                            </td>
+
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------->
+            <!-- DATA MANUAL -->
+            <!-------------------------------------------------->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    Data Tambahan
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <label>Kode Pos</label>
+
+                            <input
+                                id="kodePos"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label>Telepon</label>
+
+                            <input
+                                id="telepon"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label>Email</label>
+
+                            <input
+                                id="email"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------->
+            <!-- TOMBOL -->
+            <!-------------------------------------------------->
+
+            <div class="mt-4 text-center">
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="kembali()">
+
+                    <i class="fa fa-arrow-left"></i>
+
+                    Kembali
+
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="previewF101()">
+
+                    <i class="fa fa-eye"></i>
+
+                    Preview
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-------------------------------------------------->
+<!-- LOADING -->
+<!-------------------------------------------------->
+
+<div id="loading">
+
+    <div class="spinner-border text-light"></div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/f101.js"></script>
+
+</body>
+
+</html>

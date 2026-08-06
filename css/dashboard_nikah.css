@@ -1,0 +1,237 @@
+/*======================================================
+  BODY
+======================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#f5f7fa;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    color:#333;
+
+}
+
+/*======================================================
+  HEADER
+======================================================*/
+
+.header{
+
+    background:linear-gradient(135deg,#198754,#157347);
+
+    color:#fff;
+
+    padding:25px 0;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.header h2{
+
+    margin:0;
+
+    font-weight:bold;
+
+}
+
+.subjudul{
+
+    margin-top:5px;
+
+    font-size:15px;
+
+    opacity:.9;
+
+}
+
+#namaUser{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/*======================================================
+  STATISTIK
+======================================================*/
+
+.statistik{
+
+    border:none;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.statistik:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.judul{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.angka{
+
+    margin-top:10px;
+
+    font-size:38px;
+
+    color:#198754;
+
+    font-weight:bold;
+
+}
+
+/*======================================================
+  MENU
+======================================================*/
+
+.menu-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+.menu-card i{
+
+    font-size:55px;
+
+    color:#198754;
+
+    margin-bottom:20px;
+
+}
+
+.menu-card h4{
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+.menu-card p{
+
+    color:#777;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+/*======================================================
+  FOOTER
+======================================================*/
+
+footer{
+
+    margin-top:50px;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+/*======================================================
+  LOGO
+======================================================*/
+
+.logo-desa{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+}
+
+
+/*======================================================
+  RESPONSIVE
+======================================================*/
+
+@media(max-width:768px){
+
+    .header{
+
+        text-align:center;
+
+    }
+
+    .header .text-end{
+
+        text-align:center!important;
+
+        margin-top:20px;
+
+    }
+
+    .menu-card{
+
+        margin-bottom:20px;
+
+    }
+
+    .angka{
+
+        font-size:32px;
+
+    }
+
+}

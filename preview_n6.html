@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preview N6 - Keterangan Kematian</title>
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="preview.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="container mt-4">
+
+
+<div class="card shadow">
+
+
+<div class="card-header text-center">
+
+<h5>
+FORMULIR KETERANGAN KEMATIAN (N6)
+</h5>
+
+</div>
+
+
+
+<div class="card-body">
+
+
+
+<!--==================================================
+ PILIH STATUS
+===================================================-->
+
+<div class="mb-3">
+
+
+<label class="form-label fw-bold">
+
+Jenis N6
+
+</label>
+
+
+<div>
+
+
+<label>
+
+<input 
+
+type="radio"
+
+name="jenisN6"
+
+value="DUDA"
+
+onchange="pilihN6()">
+
+Calon Suami (Duda)
+
+</label>
+
+
+</div>
+
+
+<div>
+
+
+<label>
+
+<input 
+
+type="radio"
+
+name="jenisN6"
+
+value="JANDA"
+
+onchange="pilihN6()">
+
+Calon Istri (Janda)
+
+</label>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!--==================================================
+ DATA CALON PENGANTIN
+===================================================-->
+
+<h6 class="mt-4">
+
+DATA CALON PENGANTIN
+
+</h6>
+
+
+
+<div class="mb-2">
+
+<label>
+
+Nama
+
+</label>
+
+
+<input 
+
+class="form-control"
+
+id="namaPemohon"
+
+readonly>
+
+</div>
+
+<div class="mb-2">
+
+    <label>Bin / Binti Pemohon</label>
+
+    <input
+        class="form-control"
+        id="binPemohon">
+
+</div>
+
+
+
+<div class="mb-2">
+
+<label>
+
+NIK
+
+</label>
+
+
+<input 
+
+class="form-control"
+
+id="nikPemohon"
+
+readonly>
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Tempat / Tanggal Lahir
+
+</label>
+
+
+<input 
+
+class="form-control"
+
+id="ttlPemohon"
+
+readonly>
+
+</div>
+
+
+
+<div class="mb-2">
+
+<label>
+
+Agama
+
+</label>
+
+
+<input 
+
+class="form-control"
+
+id="agamaPemohon"
+
+readonly>
+
+</div>
+
+
+
+<div class="mb-2">
+
+<label>
+
+Pekerjaan
+
+</label>
+
+
+<input 
+
+class="form-control"
+
+id="pekerjaanPemohon"
+
+readonly>
+
+</div>
+
+
+
+<div class="mb-2">
+
+<label>
+
+Alamat
+
+</label>
+
+
+<textarea
+
+class="form-control"
+
+id="alamatPemohon"
+
+rows="3"
+
+readonly></textarea>
+
+</div>
+
+
+
+
+
+<!--==================================================
+ DATA PASANGAN MENINGGAL
+===================================================-->
+
+
+<h6 class="mt-4">
+
+DATA PASANGAN MENINGGAL
+
+</h6>
+
+
+
+<div class="alert alert-info">
+
+Data ini hanya untuk pencetakan N6 dan tidak disimpan ke database.
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Nama Pasangan
+
+</label>
+
+
+<input
+
+class="form-control"
+
+id="namaPasangan">
+
+</div>
+
+
+<div class="mb-2">
+
+    <label>Bin / Binti</label>
+
+    <input
+        class="form-control"
+        id="binPasangan">
+
+</div>
+
+<div class="mb-2">
+
+<label>
+
+NIK Pasangan
+
+</label>
+
+
+<input
+
+class="form-control"
+
+id="nikPasangan">
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Tempat Lahir Pasangan
+
+</label>
+
+
+<input
+
+class="form-control"
+
+id="tempatLahirPasangan">
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Tanggal Lahir Pasangan
+
+</label>
+
+
+<input
+
+type="date"
+
+class="form-control"
+
+id="tanggalLahirPasangan">
+
+</div>
+
+<div class="mb-2">
+
+    <label>Agama</label>
+
+    <input
+        class="form-control"
+        id="agamaPasangan">
+
+</div>
+
+<div class="mb-2">
+
+    <label>Pekerjaan</label>
+
+    <input
+        class="form-control"
+        id="pekerjaanPasangan">
+
+</div>
+
+<div class="mb-2">
+
+    <label>Alamat</label>
+
+    <textarea
+        class="form-control"
+        id="alamatPasangan"
+        rows="3"></textarea>
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Tanggal Meninggal
+
+</label>
+
+
+<input
+
+type="date"
+
+class="form-control"
+
+id="tanggalMeninggal">
+
+</div>
+
+
+
+
+<div class="mb-2">
+
+<label>
+
+Tempat Meninggal
+
+</label>
+
+
+<input
+
+class="form-control"
+
+id="tempatMeninggal">
+
+</div>
+
+
+
+
+
+<!--==================================================
+ TOMBOL
+===================================================-->
+
+<div class="text-center mt-4">
+
+
+<button
+
+class="btn btn-secondary"
+
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+Kembali
+
+</button>
+
+
+
+<button
+
+class="btn btn-primary"
+
+onclick="simpanPreviewN6()">
+
+<i class="fa fa-print"></i>
+
+Preview Cetak
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<script src="js/preview_nikah.js"></script>
+
+<script src="js/preview_n6.js"></script>
+
+
+</body>
+
+</html>

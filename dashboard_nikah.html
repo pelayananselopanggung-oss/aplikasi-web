@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Nikah</title>
+
+<link
+rel="stylesheet"
+href="bootstrap/css/bootstrap.min.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link
+rel="stylesheet"
+href="css/dashboard_nikah.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+LOADING
+========================================== -->
+
+<div
+id="loading"
+style="display:none;">
+
+    <div class="spinner-border text-success"></div>
+
+</div>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<div class="header">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-8">
+
+                <div class="d-flex align-items-center">
+
+                    <img
+                        src="assets/logo_kua.png"
+                        alt="Logo Desa"
+                        class="logo-desa me-3">
+
+                    <div>
+
+                        <h2 class="mb-0">
+
+                            
+
+                            PELAYANAN NIKAH
+
+                        </h2>
+
+                        <div class="subjudul">
+
+                            Desa Selopanggung
+
+                        </div>
+
+                        <div
+                        id="statusInternet"
+                        class="mt-2">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 text-end">
+
+                <div
+                id="namaUser"
+                class="fw-bold fs-5">
+
+                </div>
+
+                <div class="mb-2">
+
+                    Operator Nikah
+
+                </div>
+
+                <button
+
+                    class="btn btn-light btn-sm"
+
+                    onclick="logout()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+CONTENT
+========================================== -->
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+
+            <div
+            class="menu-card"
+            onclick="buatNikah()">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                <h4>
+
+                    Permohonan Nikah
+
+                </h4>
+
+                <p>
+
+                    Input Permohonan Baru
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+
+            <div
+            class="menu-card"
+            onclick="riwayat()">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h4>
+
+                    Riwayat Nikah
+
+                </h4>
+
+                <p>
+
+                    Lihat dan Cetak Ulang
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+
+            <div
+            class="menu-card"
+            onclick="pengaturan()">
+
+                <i class="fa-solid fa-user-gear"></i>
+
+                <h4>
+
+                    Setting Akun
+
+                </h4>
+
+                <p>
+
+                    Pengaturan akun operator
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+
+            <div
+            class="menu-card"
+            onclick="tandatangan()">
+
+                <i class="fa-solid fa-signature"></i>
+
+                <h4>
+
+                    Tanda Tangan
+
+                </h4>
+
+                <p>
+
+                    Pengaturan Tanda Tangan
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="text-center mt-5 mb-3 text-muted">
+
+    <hr>
+
+    Sistem Administrasi Desa Selopanggung
+
+    <br>
+
+    <small>
+
+        Versi 1.0
+
+    </small>
+
+</footer>
+
+<!-- ==========================================
+SCRIPT
+========================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/offline/db.js"></script>
+
+<script src="js/offline/queue.js"></script>
+
+<script src="js/offline/replay.js"></script>
+
+<script src="js/offline/sync.js"></script>
+
+<script src="js/offline/network.js"></script>
+
+<script src="js/offline/register-sw.js"></script>
+
+<script src="js/dashboard_nikah.js"></script>
+
+</body>
+
+</html>

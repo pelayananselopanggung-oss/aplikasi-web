@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aplikasi Pelayanan Kependudukan</title>
+
+     <link rel="manifest" href="manifest.json">
+
+     <meta name="theme-color" content="#198754">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+   
+</head>
+
+
+
+<!-- ==========================================
+POPUP PILIH MODE ADMIN
+========================================== -->
+
+<div id="popupRole" class="popup-role">
+
+    <div class="popup-card">
+
+        <h4>
+            <i class="fa-solid fa-user-shield"></i>
+            Login Admin
+        </h4>
+
+        <p>
+            Pilih mode yang akan digunakan.
+        </p>
+
+        <button
+            class="btn btn-primary w-100 mb-3"
+            onclick="masukOperator()">
+
+            <i class="fa-solid fa-desktop"></i>
+
+            Operator Administrasi
+
+        </button>
+
+        <button
+            class="btn btn-success w-100"
+            onclick="masukNikah()">
+
+            <i class="fa-solid fa-ring"></i>
+
+            Operator Nikah
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<body>
+
+
+        <div class="login-box">
+
+            <!-- Logo -->
+            <img src="assets/logo.png"
+                class="logo"
+                alt="Logo Desa">
+
+            <!-- Judul -->
+            <h3 class="mb-4">
+
+                APLIKASI PELAYANAN<br>
+                KEPENDUDUKAN
+
+            </h3>
+
+            <!-- Username -->
+
+            <div class="input-group mb-3">
+
+                <span class="input-group-text">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+                <input
+                    type="text"
+                    id="username"
+                    class="form-control"
+                    placeholder="Username">
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-group mb-3">
+
+                <span class="input-group-text">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </span>
+
+                <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Password">
+
+                <button
+                    class="btn btn-light"
+                    type="button"
+                    onclick="lihatPassword()">
+
+                    <i id="iconPassword"
+                        class="fa-solid fa-eye"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Tombol Login -->
+
+            <button
+                class="btn btn-primary btn-login"
+                onclick="login()">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                LOGIN
+
+            </button>
+
+            <!-- Loading -->
+
+            <div
+                id="loading"
+                class="mt-3"
+                style="display:none;">
+
+                <div class="spinner-border text-light"></div>
+
+                <p class="mt-2">
+
+                    Sedang Login...
+
+                </p>
+
+            </div>
+
+            <!-- Info -->
+
+            <div
+                id="info"
+                class="mt-3 text-warning fw-bold">
+
+            </div>
+
+            <!-- Footer -->
+
+            <div class="footer">
+
+                Pemerintah Desa Selopanggung
+
+                <br>
+
+                Versi 1.0.0
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/offline/db.js"></script>
+<script src="js/offline/queue.js"></script>
+<script src="js/offline/replay.js"></script>
+<script src="js/offline/sync.js"></script>
+<script src="js/offline/network.js"></script>
+<script src="js/offline/register-sw.js"></script>
+
+
+    <!-- Javascript -->
+    <script src="js/config.js"></script>
+
+
+    
+
+    <script>
+
+        function lihatPassword() {
+
+            const pass = document.getElementById("password");
+
+            const icon = document.getElementById("iconPassword");
+
+            if (pass.type === "password") {
+
+                pass.type = "text";
+
+                icon.className = "fa-solid fa-eye-slash";
+
+            } else {
+
+                pass.type = "password";
+
+                icon.className = "fa-solid fa-eye";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

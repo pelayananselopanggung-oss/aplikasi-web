@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Cetak Data Penduduk</title>
+
+    <link
+        rel="stylesheet"
+        href="bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="fontawesome/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/cetak_penduduk.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <!--==========================================
+      TOOLBAR
+    ===========================================-->
+
+    <div
+        id="toolbar"
+        class="mb-3 text-end">
+
+        <button
+            class="btn btn-primary"
+            onclick="cetakDokumen()">
+
+            <i class="fa fa-print"></i>
+
+            Cetak
+
+        </button>
+
+        <button
+            class="btn btn-secondary"
+            onclick="window.close()">
+
+            <i class="fa fa-times"></i>
+
+            Tutup
+
+        </button>
+
+    </div>
+
+    <!--==========================================
+      HASIL CETAK
+    ===========================================-->
+
+    <div id="hasilCetak">
+
+        <div class="text-center p-5">
+
+            Memuat data...
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/cetak_penduduk.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+
+    background:#f4f7fb;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    min-height:60px;
+
+}
+
+.navbar-brand{
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+/* =====================================================
+   CARD PENCARIAN
+===================================================== */
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+}
+
+.card-body{
+
+    padding:20px;
+
+}
+
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.form-control{
+
+    height:48px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+    border-color:#0d6efd;
+
+}
+
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
+
+.btn-primary{
+
+    height:48px;
+
+}
+
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+#statusArea{
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* =====================================================
+   CARD ANGGOTA
+===================================================== */
+
+.anggota-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    border-left:6px solid #0d6efd;
+
+}
+
+.anggota-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+/* =====================================================
+   FOTO
+===================================================== */
+
+.anggota-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    color:white;
+
+}
+
+
+
+/* =====================================================
+   ICON WARNA
+===================================================== */
+
+.laki{
+
+    background:#0d6efd;
+
+}
+
+.perempuan{
+
+    background:#ff4da6;
+
+}
+
+
+
+/* =====================================================
+   NAMA
+===================================================== */
+
+.nama{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#222;
+
+}
+
+
+
+/* =====================================================
+   DETAIL
+===================================================== */
+
+.detail{
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-top:2px;
+
+}
+
+
+
+/* =====================================================
+   STATUS HUBUNGAN
+===================================================== */
+
+.badge-status{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+}
+
+.kepala{
+
+    background:#198754;
+
+}
+
+.istri{
+
+    background:#ff4da6;
+
+}
+
+.anak{
+
+    background:#0d6efd;
+
+}
+
+.lain{
+
+    background:#6c757d;
+
+}
+
+
+
+/* =====================================================
+   TOMBOL TAMBAH
+===================================================== */
+
+#btnTambah{
+
+    height:52px;
+
+    font-size:18px;
+
+}
+
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.75);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:9999;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+.navbar-brand{
+
+    font-size:18px;
+
+}
+
+.nama{
+
+    font-size:17px;
+
+}
+
+.anggota-icon{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:24px;
+
+}
+
+.detail{
+
+    font-size:13px;
+
+}
+
+}

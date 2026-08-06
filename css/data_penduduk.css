@@ -1,0 +1,289 @@
+/*==========================================================
+BODY
+==========================================================*/
+
+body{
+    background:#edf2f7;
+    font-family:"Segoe UI",Tahoma,sans-serif;
+}
+
+
+/*==========================================================
+CARD UTAMA
+==========================================================*/
+
+.card{
+    border:none;
+    border-radius:12px;
+}
+
+.card-header{
+    border-radius:12px 12px 0 0 !important;
+}
+
+
+/*==========================================================
+PENCARIAN
+==========================================================*/
+
+#cari{
+    border-radius:8px;
+}
+
+
+/*==========================================================
+LIST DATA
+==========================================================*/
+
+.penduduk-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+
+/*==========================================================
+CARD PENDUDUK
+==========================================================*/
+
+.penduduk-card{
+    background:#fff;
+    border:1px solid #dee2e6;
+    border-left:5px solid #0d6efd;
+    border-radius:10px;
+    transition:.25s;
+}
+
+.penduduk-card:hover{
+    box-shadow:0 .4rem 1rem rgba(0,0,0,.15);
+    transform:translateY(-2px);
+}
+
+
+/*==========================================================
+ISI CARD
+==========================================================*/
+
+.penduduk-body{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+
+
+/*==========================================================
+FOTO
+==========================================================*/
+
+.foto-area{
+    width:95px;
+    flex-shrink:0;
+}
+
+.foto-penduduk{
+    width:90px;
+    height:110px;
+    object-fit:cover;
+    border:2px solid #ced4da;
+    border-radius:8px;
+    background:#fff;
+}
+
+.foto-default{
+    width:90px;
+    height:110px;
+    border-radius:8px;
+    border:2px solid #ced4da;
+    background:#f8f9fa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#adb5bd;
+    font-size:42px;
+}
+
+
+/*==========================================================
+DATA
+==========================================================*/
+
+.data-area{
+    flex:1;
+}
+
+.nama-penduduk{
+    margin:0;
+    margin-bottom:10px;
+    font-size:22px;
+    font-weight:700;
+    color:#0d6efd;
+    text-transform:uppercase;
+}
+
+.identitas{
+    display:flex;
+    margin-bottom:6px;
+    font-size:15px;
+}
+
+.identitas label{
+    width:130px;
+    font-weight:600;
+    color:#6c757d;
+    margin:0;
+}
+
+.identitas span{
+    flex:1;
+    color:#212529;
+}
+
+
+/*==========================================================
+AKSI
+==========================================================*/
+
+.aksi-area{
+    width:130px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.aksi-area .btn{
+    width:100%;
+}
+
+
+/*==========================================================
+BADGE
+==========================================================*/
+
+.badge-jk{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.badge-l{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.badge-p{
+    background:#e83e8c;
+    color:#fff;
+}
+
+
+/*==========================================================
+INFO
+==========================================================*/
+
+#infoData{
+    font-size:15px;
+}
+
+
+/*==========================================================
+PAGINATION
+==========================================================*/
+
+.pagination .page-link{
+    border-radius:6px;
+}
+
+
+/*==========================================================
+LOADING
+==========================================================*/
+
+.loading{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .penduduk-body{
+        flex-direction:column;
+    }
+
+    .foto-area{
+        width:100%;
+        text-align:center;
+    }
+
+    .foto-penduduk,
+    .foto-default{
+        width:110px;
+        height:135px;
+    }
+
+    .aksi-area{
+        width:100%;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+
+    .aksi-area .btn{
+        width:auto;
+    }
+
+    .identitas{
+        display:block;
+    }
+
+    .identitas label{
+        width:auto;
+        display:block;
+    }
+
+    .nama-penduduk{
+        text-align:center;
+    }
+
+}
+
+.foto-default{
+
+    width:90px;
+
+    height:110px;
+
+    border-radius:8px;
+
+    background:#eef3f8;
+
+    border:1px solid #cfd8dc;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.foto-default i{
+
+    font-size:48px;
+
+    color:#6c757d;
+
+}

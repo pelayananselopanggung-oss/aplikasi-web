@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard</title>
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<!-- ===================================== -->
+<!-- POPUP STATUS SINKRONISASI -->
+<!-- ===================================== -->
+
+<div
+    class="modal fade"
+    id="modalSinkron"
+    tabindex="-1"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary text-white">
+
+                <h5 class="modal-title">
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                    Status Sinkronisasi
+
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body text-center">
+
+                <i
+                    id="iconSinkron"
+                    class="fa-solid fa-cloud fa-4x text-secondary mb-3">
+                </i>
+
+                <h4 id="statusInternet">
+
+                    Memeriksa koneksi...
+
+                </h4>
+
+                <div class="mt-4">
+
+                    <h6 class="text-muted">
+
+                        Data Belum Tersinkron
+
+                    </h6>
+
+                    <h1
+                        id="jumlahBelumSync"
+                        class="fw-bold">
+
+                        0
+
+                    </h1>
+
+                </div>
+
+                <p
+                    id="pesanSinkron"
+                    class="text-muted mt-3">
+
+                    Sinkronisasi akan berjalan otomatis ketika perangkat kembali online.
+
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal">
+
+                    Tutup
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+
+            <img src="assets/logo.png" width="40">
+
+            Pelayanan Kependudukan
+
+        </a>
+
+        <div class="ms-auto">
+
+            <span class="text-white me-3">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span id="namaOperator"></span>
+
+            </span>
+
+            <button class="btn btn-light btn-sm"
+                onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= CONTENT ================= -->
+
+<div class="container mt-4">
+
+    <!-- Selamat Datang -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body">
+
+            <div class="row align-items-center">
+
+                <div class="col-auto">
+
+                    <i class="fa-solid fa-circle-user fa-4x text-primary"></i>
+
+                </div>
+
+                <div class="col">
+
+                    <small>Selamat Datang</small>
+
+                    <h3 id="nama"></h3>
+
+                    <b>DESA SELOPANGGUNG</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuPenduduk">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-users fa-3x text-primary"></i>
+
+                    <h5 class="mt-3">Data Penduduk</h5>
+
+                    <small>Input / Edit / Update</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuKK">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-house-user fa-3x text-success"></i>
+
+                    <h5 class="mt-3">Keluarga</h5>
+
+                    <small>Data KK</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuPermohonan">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-file-lines fa-3x text-warning"></i>
+
+                    <h5 class="mt-3">Permohonan</h5>
+
+                    <small>Surat/Formulir</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuPreview">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-address-card fa-3x text-info"></i>
+
+                    <h5 class="mt-3">Penduduk</h5>
+
+                    <small>Preview Data</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuRiwayat">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-clock-rotate-left fa-3x text-danger"></i>
+
+                    <h5 class="mt-3">Riwayat</h5>
+
+                    <small>Agenda Surat</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuCetak">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-print fa-3x text-secondary"></i>
+
+                    <h5 class="mt-3">Dokumen Dukcapil</h5>
+
+                    <small>Download/Cetak</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuTTD">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-signature fa-3x text-success"></i>
+
+                    <h5 class="mt-3">Tanda Tangan</h5>
+
+                    <small>Pengaturan Tanda Tangan</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuPengaturan">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-gear fa-3x text-primary"></i>
+
+                    <h5 class="mt-3">Pengaturan</h5>
+
+                    <small>Akun</small>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="card menu-card h-100" id="menuPertanahan">
+
+                <div class="card-body text-center">
+
+                    <i class="fas fa-map-marked-alt fa-3x" style="color:#6D4C41;"></i>
+
+                    <h5 class="mt-3">Pertanahan</h5>
+
+                    <small>Pelayanan Administrasi Pertanahan</small>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    <!-- Statistik -->
+
+    <div class="row mt-5">
+
+        <div class="col-md-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <h6 class="text-primary">
+
+                        JUMLAH PENDUDUK
+
+                    </h6>
+
+                    <h1 id="jmlPenduduk">0</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <h6 class="text-primary">
+
+                        JUMLAH KK
+
+                    </h6>
+
+                    <h1 id="jmlKK">0</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- Bootstrap -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dashboard JS -->
+<script src="js/config.js"></script>
+
+<script src="js/offline/db.js"></script>
+<script src="js/offline/queue.js"></script>
+<script src="js/offline/replay.js"></script>
+<script src="js/offline/sync.js"></script>
+<script src="js/offline/network.js"></script>
+<script src="js/offline/register-sw.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

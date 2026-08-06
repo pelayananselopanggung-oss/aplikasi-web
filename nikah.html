@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Permohonan Nikah</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/nikah.css">
+
+</head>
+
+<body>
+
+<!-- LOADING -->
+    <div id="loading">
+
+        <div class="spinner"></div>
+
+    </div>
+
+    <div class="container my-4">
+
+
+<div class="container my-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">
+                <i class="fas fa-ring me-2"></i>
+                PERMOHONAN NIKAH
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <!-- ====================================================== -->
+            <!-- DATA CALON SUAMI -->
+            <!-- ====================================================== -->
+
+            <div class="card mb-4">
+
+                <div class="card-header bg-secondary text-white">
+
+                    DATA CALON SUAMI
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-4">
+
+                            <label>NIK</label>
+
+                            <input
+                                type="text"
+                                id="nikSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-2 d-grid">
+
+                            <label>&nbsp;</label>
+
+                            <button
+                                class="btn btn-primary"
+                                onclick="cariPenduduk('Suami')">
+
+                                <i class="fas fa-search"></i>
+                                Cari
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>Nama</label>
+
+                            <input
+                                type="text"
+                                id="namaSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tempat Lahir</label>
+
+                            <input
+                                type="text"
+                                id="tempatLahirSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tanggal Lahir</label>
+
+                            <input
+                                type="date"
+                                id="tanggalLahirSuami"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Jenis Kelamin</label>
+
+                            <select
+                                id="jenisKelaminSuami"
+                                class="form-select">
+
+                                <option value="">Pilih</option>
+                                <option>Laki-Laki</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Kewarganegaraan</label>
+
+                            <input
+                                type="text"
+                                id="kewarganegaraanSuami"
+                                class="form-control"
+                                value="WNI">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Agama</label>
+
+                            <input
+                                type="text"
+                                id="agamaSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Status Kawin</label>
+
+                            <input
+                                type="text"
+                                id="statusKawinSuami"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>Pekerjaan</label>
+
+                            <input
+                                type="text"
+                                id="pekerjaanSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>Alamat</label>
+
+                            <textarea
+                                id="alamatSuami"
+                                rows="3"
+                                class="form-control"></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- DATA AYAH SUAMI -->
+            <!-- ====================================================== -->
+
+            <div class="card mb-4">
+
+                <div class="card-header bg-info text-white">
+
+                    DATA AYAH SUAMI
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-4">
+
+                            <label>NIK Ayah</label>
+
+                            <input
+                                type="text"
+                                id="nikAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-2 d-grid">
+
+                            <label>&nbsp;</label>
+
+                            <button
+                                class="btn btn-info text-white"
+                                onclick="cariPenduduk('AyahSuami')">
+
+                                <i class="fas fa-search"></i>
+                                Cari
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>Nama Ayah</label>
+
+                            <input
+                                type="text"
+                                id="namaAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tempat Lahir</label>
+
+                            <input
+                                type="text"
+                                id="tempatLahirAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tanggal Lahir</label>
+
+                            <input
+                                type="date"
+                                id="tanggalLahirAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Agama</label>
+
+                            <input
+                                type="text"
+                                id="agamaAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Pekerjaan</label>
+
+                            <input
+                                type="text"
+                                id="pekerjaanAyahSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Alamat</label>
+
+                            <textarea
+                                id="alamatAyahSuami"
+                                rows="3"
+                                class="form-control"></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- DATA IBU SUAMI -->
+            <!-- ====================================================== -->
+
+            <div class="card mb-4">
+
+                <div class="card-header bg-warning">
+
+                    DATA IBU SUAMI
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-4">
+
+                            <label>NIK Ibu</label>
+
+                            <input
+                                type="text"
+                                id="nikIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-2 d-grid">
+
+                            <label>&nbsp;</label>
+
+                            <button
+                                class="btn btn-warning"
+                                onclick="cariPenduduk('IbuSuami')">
+
+                                <i class="fas fa-search"></i>
+                                Cari
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>Nama Ibu</label>
+
+                            <input
+                                type="text"
+                                id="namaIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tempat Lahir</label>
+
+                            <input
+                                type="text"
+                                id="tempatLahirIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+
+                            <label>Tanggal Lahir</label>
+
+                            <input
+                                type="date"
+                                id="tanggalLahirIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Agama</label>
+
+                            <input
+                                type="text"
+                                id="agamaIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Pekerjaan</label>
+
+                            <input
+                                type="text"
+                                id="pekerjaanIbuSuami"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label>Alamat</label>
+
+                            <textarea
+                                id="alamatIbuSuami"
+                                rows="3"
+                                class="form-control"></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ====================================================== -->
+<!-- DATA CALON ISTRI -->
+<!-- ====================================================== -->
+
+<div class="card mb-4">
+
+    <div class="card-header bg-secondary text-white">
+
+        DATA CALON ISTRI
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row mb-3">
+
+            <div class="col-md-4">
+
+                <label>NIK</label>
+
+                <input
+                    type="text"
+                    id="nikIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-2 d-grid">
+
+                <label>&nbsp;</label>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="cariPenduduk('Istri')">
+
+                    <i class="fas fa-search"></i>
+                    Cari
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Nama</label>
+
+                <input
+                    type="text"
+                    id="namaIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tempat Lahir</label>
+
+                <input
+                    type="text"
+                    id="tempatLahirIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tanggal Lahir</label>
+
+                <input
+                    type="date"
+                    id="tanggalLahirIstri"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 mb-3">
+
+                <label>Jenis Kelamin</label>
+
+                <select
+                    id="jenisKelaminIstri"
+                    class="form-select">
+
+                    <option value="">Pilih</option>
+                    <option>Perempuan</option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Kewarganegaraan</label>
+
+                <input
+                    type="text"
+                    id="kewarganegaraanIstri"
+                    class="form-control"
+                    value="WNI">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Agama</label>
+
+                <input
+                    type="text"
+                    id="agamaIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Status Kawin</label>
+
+                <input
+                    type="text"
+                    id="statusKawinIstri"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Pekerjaan</label>
+
+                <input
+                    type="text"
+                    id="pekerjaanIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+
+                <label>Alamat</label>
+
+                <textarea
+                    id="alamatIstri"
+                    rows="3"
+                    class="form-control"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- DATA AYAH ISTRI -->
+<!-- ====================================================== -->
+
+<div class="card mb-4">
+
+    <div class="card-header bg-info text-white">
+
+        DATA AYAH ISTRI
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row mb-3">
+
+            <div class="col-md-4">
+
+                <label>NIK Ayah</label>
+
+                <input
+                    type="text"
+                    id="nikAyahIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-2 d-grid">
+
+                <label>&nbsp;</label>
+
+                <button
+                    class="btn btn-info text-white"
+                    onclick="cariPenduduk('AyahIstri')">
+
+                    <i class="fas fa-search"></i>
+                    Cari
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Nama Ayah</label>
+
+                <input
+                    type="text"
+                    id="namaAyahIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tempat Lahir</label>
+
+                <input
+                    type="text"
+                    id="tempatLahirAyahIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tanggal Lahir</label>
+
+                <input
+                    type="date"
+                    id="tanggalLahirAyahIstri"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+
+                <label>Agama</label>
+
+                <input
+                    type="text"
+                    id="agamaAyahIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+
+                <label>Pekerjaan</label>
+
+                <input
+                    type="text"
+                    id="pekerjaanAyahIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+
+                <label>Alamat</label>
+
+                <textarea
+                    id="alamatAyahIstri"
+                    rows="3"
+                    class="form-control"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- DATA IBU ISTRI -->
+<!-- ====================================================== -->
+
+<div class="card mb-4">
+
+    <div class="card-header bg-warning">
+
+        DATA IBU ISTRI
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row mb-3">
+
+            <div class="col-md-4">
+
+                <label>NIK Ibu</label>
+
+                <input
+                    type="text"
+                    id="nikIbuIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-2 d-grid">
+
+                <label>&nbsp;</label>
+
+                <button
+                    class="btn btn-warning"
+                    onclick="cariPenduduk('IbuIstri')">
+
+                    <i class="fas fa-search"></i>
+                    Cari
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Nama Ibu</label>
+
+                <input
+                    type="text"
+                    id="namaIbuIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tempat Lahir</label>
+
+                <input
+                    type="text"
+                    id="tempatLahirIbuIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tanggal Lahir</label>
+
+                <input
+                    type="date"
+                    id="tanggalLahirIbuIstri"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+
+                <label>Agama</label>
+
+                <input
+                    type="text"
+                    id="agamaIbuIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+
+                <label>Pekerjaan</label>
+
+                <input
+                    type="text"
+                    id="pekerjaanIbuIstri"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+
+                <label>Alamat</label>
+
+                <textarea
+                    id="alamatIbuIstri"
+                    rows="3"
+                    class="form-control"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- DATA AKAD NIKAH -->
+<!-- ====================================================== -->
+
+<div class="card mb-4">
+
+    <div class="card-header bg-success text-white">
+
+        DATA AKAD NIKAH
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-md-3 mb-3">
+
+                <label>Hari</label>
+
+                <input
+                    type="text"
+                    id="hariAkad"
+                    readonly
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tanggal Akad</label>
+
+                <input
+                 type="date"
+                 id="tanggalAkad"
+                 onchange="setHariAkad()"
+                 class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Jam Akad</label>
+
+                <input
+                    type="time"
+                    id="jamAkad"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label>Tempat Akad</label>
+
+                <input
+                    type="text"
+                    id="tempatAkad"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Maskawin</label>
+
+                <textarea
+                    id="maskawin"
+                    rows="2"
+                    class="form-control"></textarea>
+
+            </div>
+
+            <div class="col-md-2 mb-3">
+
+                <label>Nama KUA</label>
+
+                <input
+                    type="text"
+                    id="namaKua"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-2 mb-3">
+
+                <label>Kecamatan KUA</label>
+
+                <input
+                    type="text"
+                    id="kecamatanKua"
+                    class="form-control">
+
+            </div>
+
+            <div class="col-md-2 mb-3">
+
+                <label>Kabupaten KUA</label>
+
+                <input
+                    type="text"
+                    id="kabupatenKua"
+                    class="form-control">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- TOMBOL -->
+<!-- ====================================================== -->
+
+<div class="text-center mb-5">
+
+    <button
+        class="btn btn-secondary me-2"
+        onclick="kembali()">
+
+        <i class="fas fa-arrow-left"></i>
+        Kembali
+
+    </button>
+
+    <button
+        class="btn btn-primary"
+        onclick="previewNikah()">
+
+        <i class="fas fa-eye"></i>
+        Preview
+
+    </button>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/nikah.js"></script>
+
+</body>
+</html>

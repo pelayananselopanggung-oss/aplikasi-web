@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Data Penduduk</title>
+
+    <link rel="stylesheet"
+          href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <link rel="stylesheet"
+          href="css/data_penduduk.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid py-3">
+
+    <div class="card shadow">
+
+        <!--==========================================
+        HEADER
+        ==========================================-->
+
+        <div class="card-header bg-primary text-white">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <h4 class="mb-0">
+
+                    <i class="fa fa-users"></i>
+
+                    DATA PENDUDUK
+
+                </h4>
+
+                <div>
+
+                    <button
+                        class="btn btn-danger"
+                        onclick="modalCetakSemua()">
+
+                        <i class="fa fa-print"></i>
+
+                        Cetak
+
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="kembali()">
+
+                        <i class="fa fa-arrow-left"></i>
+
+                        Kembali
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==========================================
+        BODY
+        ==========================================-->
+
+        <div class="card-body">
+
+            <!--==========================================
+            PENCARIAN
+            ==========================================-->
+
+            <div class="row mb-3 align-items-center">
+
+                <div class="col-lg-5 col-md-6">
+
+                    <input
+                        type="search"
+                        id="cari"
+                        class="form-control"
+                        placeholder="Cari NIK / Nama / Nomor KK"
+                        autocomplete="off">
+
+                </div>
+
+                <div class="col-lg-3 col-md-3 mt-2 mt-md-0">
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+
+                            Tampilkan
+
+                        </span>
+
+                        <select
+                            id="perHalaman"
+                            class="form-select"
+                            onchange="gantiPerHalaman()">
+
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="999999">Semua</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-3 text-md-end mt-2 mt-md-0">
+
+                    <span
+                        id="infoData"
+                        class="fw-bold text-primary">
+
+                        Menampilkan 0 Data
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!--==========================================
+            LIST DATA PENDUDUK
+            ==========================================-->
+
+            <div
+                id="dataPenduduk"
+                class="penduduk-list">
+
+                <div class="text-center text-muted py-5">
+
+                    <i class="fa fa-users fa-4x mb-3"></i>
+
+                    <h5>
+
+                        Pencarian Data Penduduk
+
+                    </h5>
+
+                    <p class="mb-0">
+
+                        Masukkan NIK, Nama atau Nomor KK
+                        pada kotak pencarian.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!--==========================================
+            PAGINATION
+            ==========================================-->
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+
+                <div
+                    id="infoHalaman"
+                    class="text-muted">
+
+                </div>
+
+                <nav>
+
+                    <ul
+                        id="pagination"
+                        class="pagination pagination-sm mb-0">
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--==========================================
+MODAL CETAK
+===========================================-->
+
+<div
+    class="modal fade"
+    id="modalCetak"
+    tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+
+                <h5 class="modal-title">
+
+                    <i class="fa fa-print"></i>
+
+                    CETAK DATA PENDUDUK
+
+                </h5>
+
+                <button
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <label class="fw-bold mb-2">
+
+                    Jenis Cetakan
+
+                </label>
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="jenisCetak"
+                        id="cetakSemua"
+                        value="semua"
+                        checked>
+
+                    <label
+                        class="form-check-label"
+                        for="cetakSemua">
+
+                        Seluruh Data Penduduk
+
+                    </label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="jenisCetak"
+                        id="cetakPenduduk"
+                        value="penduduk">
+
+                    <label
+                        class="form-check-label"
+                        for="cetakPenduduk">
+
+                        Satu Penduduk
+
+                    </label>
+
+                </div>
+
+                <div class="form-check mb-3">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="jenisCetak"
+                        id="cetakKK"
+                        value="kk">
+
+                    <label
+                        class="form-check-label"
+                        for="cetakKK">
+
+                        Satu Kartu Keluarga
+
+                    </label>
+
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+
+                    <label class="form-label fw-bold">
+
+                        Data per Halaman
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="barisPerHalaman"
+                        class="form-control"
+                        value="25"
+                        min="5"
+                        max="100">
+
+                </div>
+
+                <hr>
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="hideNik"
+                        checked>
+
+                    <label
+                        class="form-check-label"
+                        for="hideNik">
+
+                        Sembunyikan NIK
+
+                    </label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="hideKK"
+                        checked>
+
+                    <label
+                        class="form-check-label"
+                        for="hideKK">
+
+                        Sembunyikan Nomor KK
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Batal
+
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    onclick="prosesCetak()">
+
+                    <i class="fa fa-print"></i>
+
+                    Cetak
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--==========================================
+LOADING
+===========================================-->
+
+<div
+    id="loading"
+    class="loading">
+
+    <div class="spinner-border text-primary">
+
+    </div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/aksi_penduduk.js"></script>
+<script src="js/data_penduduk.js"></script>
+
+</body>
+</html>

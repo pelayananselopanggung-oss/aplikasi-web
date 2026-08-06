@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Data Kartu Keluarga</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/kk.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-primary shadow">
+
+<div class="container-fluid">
+
+<button class="btn btn-light btn-sm"
+onclick="dashboard()">
+
+<i class="fa fa-home"></i>
+
+</button>
+
+<span class="navbar-brand mx-auto">
+
+DATA KARTU KELUARGA
+
+</span>
+
+</div>
+
+</nav>
+
+<!-- PENCARIAN -->
+
+<div class="container mt-4">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-9">
+
+<input
+
+type="text"
+
+id="txtNoKK"
+
+class="form-control"
+
+placeholder="Masukkan Nomor KK">
+
+</div>
+
+<div class="col-md-3">
+
+<button
+
+class="btn btn-primary w-100"
+
+onclick="cariKK()">
+
+<i class="fa fa-search"></i>
+
+Cari
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- STATUS -->
+
+<div class="container mt-3">
+
+<div id="statusArea"
+
+class="alert alert-info text-center">
+
+Silakan masukkan Nomor KK.
+
+</div>
+
+</div>
+
+<!-- LIST DATA -->
+
+<div class="container">
+
+<div id="listKK">
+
+</div>
+
+</div>
+
+<!-- TOMBOL TAMBAH -->
+
+<div class="container my-4">
+
+<div class="d-grid">
+
+<button
+
+id="btnTambah"
+
+class="btn btn-success btn-lg"
+
+style="display:none"
+
+onclick="tambahAnggota()">
+
+<i class="fa fa-user-plus"></i>
+
+Tambah Anggota Keluarga
+
+</button>
+
+</div>
+
+</div>
+
+<!-- LOADING -->
+
+<div id="loading"
+
+class="loading"
+
+style="display:none">
+
+<div class="spinner-border text-primary"></div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/offline/db.js"></script>
+<script src="js/kk.js"></script>
+
+
+</body>
+</html>

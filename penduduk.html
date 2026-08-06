@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Data Penduduk</title>
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet"
+          href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/penduduk.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-dark bg-primary shadow">
+
+    <div class="container-fluid">
+
+        <button
+            class="btn btn-light"
+            onclick="kembaliCariData()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <span class="navbar-brand fw-bold">
+
+            DATA PENDUDUK
+
+        </span>
+
+        <div style="width:40px;"></div>
+
+    </div>
+
+</nav>
+
+<!-- ================= CONTENT ================= -->
+
+<div class="container mt-4">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h5>
+
+<i class="fa-solid fa-address-card"></i>
+
+Form Data Penduduk
+
+</h5>
+
+</div>
+
+<div class="card-body">
+
+<form id="frmPenduduk">
+
+<div class="row">
+
+<!-- NIK -->
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+NIK
+
+</label>
+
+<input
+type="text"
+id="nik"
+class="form-control"
+maxlength="16">
+
+</div>
+
+<!-- NO KK -->
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+No. KK
+
+</label>
+
+<input
+type="text"
+id="nokk"
+class="form-control"
+maxlength="16">
+
+</div>
+
+<!-- NAMA -->
+
+<div class="col-md-12 mb-3">
+
+<label class="form-label">
+
+Nama Lengkap
+
+</label>
+
+<input
+type="text"
+id="nama"
+class="form-control">
+
+</div>
+
+<!-- TEMPAT LAHIR -->
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Tempat Lahir
+
+</label>
+
+<input
+type="text"
+id="tempatlahir"
+class="form-control">
+
+</div>
+
+<!-- TANGGAL LAHIR -->
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Tanggal Lahir
+
+</label>
+
+<input
+type="date"
+id="tgllahir"
+class="form-control">
+
+</div>
+
+<!-- JENIS KELAMIN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Jenis Kelamin
+
+    </label>
+
+    <select
+        id="jk"
+        class="form-select">
+
+        <option value="">-- Pilih --</option>
+
+        <option value="Laki-Laki">
+
+            Laki-Laki
+
+        </option>
+
+        <option value="Perempuan">
+
+            Perempuan
+
+        </option>
+
+    </select>
+
+</div>
+
+<!-- AGAMA -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Agama
+
+    </label>
+
+    <select
+        id="agama"
+        class="form-select">
+
+        <option value="">-- Pilih --</option>
+
+        <option>Islam</option>
+        <option>Kristen</option>
+        <option>Katolik</option>
+        <option>Hindu</option>
+        <option>Buddha</option>
+        <option>Konghucu</option>
+
+    </select>
+
+</div>
+
+<!-- PENDIDIKAN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Pendidikan
+
+    </label>
+
+    <input
+        type="text"
+        id="pendidikan"
+        class="form-control">
+
+</div>
+
+<!-- PEKERJAAN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Pekerjaan
+
+    </label>
+
+    <input
+        type="text"
+        id="pekerjaan"
+        class="form-control">
+
+</div>
+
+<!-- STATUS PERKAWINAN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Status Perkawinan
+
+    </label>
+
+    <select
+        id="statusKawin"
+        class="form-select">
+
+        <option value="">-- Pilih --</option>
+
+        <option>Belum Kawin</option>
+        <option>Kawin</option>
+        <option>Cerai Hidup</option>
+        <option>Cerai Mati</option>
+
+    </select>
+
+</div>
+
+<!-- STATUS HUBUNGAN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Status Hubungan Keluarga
+
+    </label>
+
+    <select
+        id="statusHubungan"
+        class="form-select">
+
+        <option value="">-- Pilih --</option>
+
+        <option>Kepala Keluarga</option>
+        <option>Suami</option>
+        <option>Istri</option>
+        <option>Anak</option>
+        <option>Menantu</option>
+        <option>Cucu</option>
+        <option>Orang Tua</option>
+        <option>Mertua</option>
+        <option>Famili Lain</option>
+
+    </select>
+
+</div>
+
+<!-- ALAMAT -->
+
+<div class="col-md-12 mb-3">
+
+    <label class="form-label">
+
+        Alamat
+
+    </label>
+
+    <textarea
+        id="alamat"
+        rows="3"
+        class="form-control"></textarea>
+
+</div>
+
+<!-- RT -->
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+
+        RT
+
+    </label>
+
+    <input
+        type="text"
+        id="rt"
+        class="form-control">
+
+</div>
+
+<!-- RW -->
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+
+        RW
+
+    </label>
+
+    <input
+        type="text"
+        id="rw"
+        class="form-control">
+
+</div>
+
+<!-- DESA -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Desa
+
+    </label>
+
+    <input
+        type="text"
+        id="desa"
+        class="form-control">
+
+</div>
+
+<!-- KECAMATAN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Kecamatan
+
+    </label>
+
+    <input
+        type="text"
+        id="kecamatan"
+        class="form-control">
+
+</div>
+
+<!-- KABUPATEN -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Kabupaten
+
+    </label>
+
+    <input
+        type="text"
+        id="kabupaten"
+        class="form-control">
+
+</div>
+
+<!-- PROVINSI -->
+
+<div class="col-md-12 mb-3">
+
+    <label class="form-label">
+
+        Provinsi
+
+    </label>
+
+    <input
+        type="text"
+        id="provinsi"
+        class="form-control">
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- ================= MENU AKSI ================= -->
+
+<div class="card shadow mt-4">
+
+    <div class="card-header bg-success text-white">
+
+        <h5 class="mb-0">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            Menu Tindakan
+
+        </h5>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+
+                <button
+                    id="btnSimpan"
+                    class="btn btn-success w-100"
+                    onclick="simpanPenduduk()">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <button
+                    id="btnEdit"
+                    class="btn btn-warning w-100"
+                    onclick="editPenduduk()">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                    Edit
+
+                </button>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <button
+                    id="btnUpdate"
+                    class="btn btn-primary w-100"
+                    onclick="updatePenduduk()">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                    Update
+
+                </button>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <button
+                    id="btnSurat"
+                    class="btn btn-info w-100"
+                    onclick="bukaPermohonan()">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Permohonan Surat Keterangan
+
+                </button>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <button
+                    class="btn btn-secondary w-100"
+                    onclick="kembaliCariData()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Kembali
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= LOADING ================= -->
+
+<div
+class="modal fade"
+id="loadingModal"
+data-bs-backdrop="static"
+data-bs-keyboard="false">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-body text-center p-5">
+
+<div class="spinner-border text-primary mb-3">
+
+</div>
+
+<h5>
+
+Sedang memproses data...
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Bootstrap -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Javascript -->
+<script src="js/offline/db.js"></script>
+<script src="js/penduduk.js"></script>
+
+
+</body>
+
+</html>

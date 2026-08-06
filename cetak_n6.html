@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Cetak N5</title>
+
+    <link
+        rel="stylesheet"
+        href="css/cetak_nikah.css">
+
+</head>
+
+<body>
+
+    <!--==============================================
+        HALAMAN CETAK
+    ==============================================-->
+
+    <div class="page">
+
+        <!--==========================================
+            LAMPIRAN
+        ==========================================-->
+
+        <div class="lampiran">
+
+            LAMPIRAN X<br>
+            KEPUTUSAN DIREKTUR JENDERAL BIMBINGAN MASYARAKAT ISLAM<br>
+            NOMOR 473 TAHUN 2020<br>
+            TENTANG<br>
+            PETUNJUK TEKNIS PELAKSANAAN PENCATATAN PERNIKAHAN
+
+        </div>
+
+        <br>
+
+        <!--==========================================
+            JUDUL
+        ==========================================-->
+
+        <div class="judul">
+
+            FORMULIR SURAT KETERANGAN KEMATIAN
+
+        </div>
+
+        <div class="model">
+
+            Model N6
+
+        </div>
+
+        <br>
+
+         <table class="identitasOrtu">
+
+            <tr>
+
+                <td class="label">KANTOR DESA/KELURAHAN</td>
+
+                <td>:</td>
+
+                <td>SELOPANGGUNG</td>
+
+            </tr>
+
+            <tr>
+
+                <td>KECAMATAN</td>
+
+                <td>:</td>
+
+                <td>SEMEN</td>
+
+            </tr>
+
+            <tr>
+
+                <td>KABUPATEN</td>
+
+                <td>:</td>
+
+                <td>KEDIRI</td>
+
+            </tr>
+
+        </table>
+
+
+        <div class="judul">
+
+            <h5><b>SURAT KETERANGAN KEMATIAN</b></h5>
+
+             </div>
+
+            <div class="nomor">
+
+            Nomor :
+
+            <span id="nomorSurat"></span>
+
+        </div>
+
+        <br>
+
+        <div id="isiSurat"></div>
+
+        <br><br>
+
+
+
+        <!--==========================================
+            FOOTER / TTD
+        ==========================================-->
+
+        <div id="footerSurat">
+
+        </div>
+
+    </div>
+
+<!--==============================================
+        QR VERIFIKASI
+    ==============================================-->
+
+    <div
+        class="qr"
+        id="areaQr">
+
+        <img
+            id="qrCode"
+            width="110">
+
+        <div>
+
+            Scan Verifikasi
+
+        </div>
+
+    </div>
+
+
+    <!--==============================================
+        TOOLBAR
+    ==============================================-->
+
+    <div class="toolbar no-print">
+
+        <button onclick="window.print()">
+
+            Cetak
+
+        </button>
+
+        <button onclick="editN6()">
+
+            Edit
+
+        </button>
+
+    </div>
+
+
+<script src="js/config.js"></script>
+
+<script src="js/tandatangan.js"></script>
+
+<script src="js/cetak_n6.js"></script>
+
+</body>
+
+</html>

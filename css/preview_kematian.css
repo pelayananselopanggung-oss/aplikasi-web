@@ -1,0 +1,514 @@
+/*======================================================
+  BODY
+======================================================*/
+
+body{
+
+    margin:0;
+
+    padding:20px;
+
+    background:#e9ecef;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/*======================================================
+  HEADER PREVIEW
+======================================================*/
+
+.card-header{
+
+    position:relative;
+
+    height:65px;
+
+    background:#0d6efd;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.card-header h4{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.card-header .btn{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    min-width:auto;
+
+    margin:0;
+
+}
+
+/*======================================================
+  CARD
+======================================================*/
+
+.card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    border:none;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
+
+}
+
+/*======================================================
+  INFO SURAT
+======================================================*/
+
+.info-surat{
+
+    background:#f8f9fa;
+
+    border-bottom:1px solid #dee2e6;
+
+    padding:12px 20px;
+
+}
+
+.info-surat table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.info-surat td{
+
+    padding:4px 0;
+
+    font-size:14px;
+
+    color:#212529;
+
+    vertical-align:top;
+
+}
+
+.info-surat td:nth-child(1){
+
+    width:170px;
+
+}
+
+.info-surat td:nth-child(2){
+
+    width:20px;
+
+    text-align:center;
+
+}
+
+
+/*======================================================
+  SURAT PREVIEW
+======================================================*/
+
+.surat-preview{
+
+    width:105mm;
+
+    min-height:165mm;
+
+    margin:25px auto;
+
+    padding:12mm;
+
+    background:#fff59d;
+
+    color:#000;
+
+    box-shadow:0 0 8px rgba(0,0,0,.25);
+
+    box-sizing:border-box;
+
+    font-family:"Times New Roman", serif;
+
+    font-size:11pt;
+
+    line-height:1.1;
+
+}
+
+/*======================================================
+  JUDUL SURAT
+======================================================*/
+
+.judul-surat{
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+}
+
+.untuk-bersangkutan{
+
+    font-family:"Times New Roman", serif;
+
+    font-size:9pt;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+
+}
+
+.nama-surat{
+
+    font-family:"Times New Roman", serif;
+
+    font-size:14pt;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    text-decoration:underline;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+/*======================================================
+  NOMOR SURAT
+======================================================*/
+
+#nomorsurat{
+
+    text-align:center;
+
+    font-size:12pt;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+  PARAGRAF SURAT
+======================================================*/
+
+.surat-preview p{
+
+    margin:6px 0;
+
+    text-align:left;
+
+    text-indent:35px;
+
+}
+
+/*======================================================
+  TABEL SURAT
+======================================================*/
+
+.surat-preview table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff59d !important;
+
+    margin-bottom:5px;
+
+}
+
+.surat-preview tbody,
+
+.surat-preview tr,
+
+.surat-preview td,
+
+.surat-preview th{
+
+    background:#fff59d !important;
+
+    border:none !important;
+
+}
+
+.surat-preview td{
+
+    padding:2px 0;
+
+    vertical-align:top;
+
+    font-family:"Times New Roman", serif;
+
+    font-size:11pt;
+
+}
+
+.surat-preview td:nth-child(1){
+
+    width:90px;
+
+}
+
+.surat-preview td:nth-child(2){
+
+    width:15px;
+
+    text-align:center;
+
+}
+
+.surat-preview td:nth-child(3){
+
+    width:auto;
+
+}
+
+/*======================================================
+  TANDA TANGAN
+======================================================*/
+
+.ttd{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.ttd td:first-child{
+
+    width:20%;
+
+}
+
+.ttd td:last-child{
+
+    width:80%;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+/*======================================================
+  BUTTON
+======================================================*/
+
+.btn{
+
+    min-width:120px;
+
+    margin:4px;
+
+    border-radius:5px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.btn i{
+
+    margin-right:5px;
+
+}
+
+/*======================================================
+  LOADING
+======================================================*/
+
+.loading{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+}
+
+.loading .spinner-border{
+
+    width:3rem;
+
+    height:3rem;
+
+}
+
+/*======================================================
+  RESPONSIVE
+======================================================*/
+
+@media screen and (max-width:768px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .card{
+
+        max-width:100%;
+
+    }
+
+    .surat-preview{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:20px;
+
+    }
+
+    .card-header h4{
+
+        font-size:18px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:8px;
+
+    }
+
+}
+
+/*======================================================
+  PRINT
+======================================================*/
+
+@page{
+
+    size:105mm 165mm;
+
+    margin:0;
+
+}
+
+@media print{
+
+    html,
+
+    body{
+
+        margin:0;
+
+        padding:0;
+
+        background:#ffffff;
+
+        width:105mm;
+
+        height:165mm;
+
+    }
+
+    .card{
+
+        border:none;
+
+        box-shadow:none;
+
+        max-width:none;
+
+        margin:0;
+
+    }
+
+    .card-header,
+
+    .info-surat,
+
+    .btn,
+
+    .loading{
+
+        display:none !important;
+
+    }
+
+    .surat-preview{
+
+        width:105mm;
+
+        min-height:165mm;
+
+        margin:0;
+
+        padding:12mm;
+
+        background:#fff59d !important;
+
+        box-shadow:none;
+
+        border:none;
+
+        -webkit-print-color-adjust:exact;
+
+        print-color-adjust:exact;
+
+    }
+
+}

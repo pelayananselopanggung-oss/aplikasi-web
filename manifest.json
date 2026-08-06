@@ -1,0 +1,25 @@
+{
+    "name": "Pelayanan Administrasi Desa Selopanggung",
+    "short_name": "Pelayanan Desa",
+    "description": "Sistem Pelayanan Administrasi Desa Selopanggung",
+    "lang": "id-ID",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#198754",
+    "theme_color": "#198754",
+
+    "icons":[
+        {
+            "src":"assets/logo_kediri.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        },
+        {
+            "src":"assets/logo_kediri.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+    ]
+}

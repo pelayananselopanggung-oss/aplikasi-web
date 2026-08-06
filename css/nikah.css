@@ -1,0 +1,269 @@
+/*======================================================
+  GLOBAL
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#f5f6fa;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    color:#333;
+
+}
+
+/*======================================================
+  CONTAINER
+======================================================*/
+
+.container{
+
+    max-width:1200px;
+
+}
+
+/*======================================================
+  CARD
+======================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    font-weight:bold;
+
+    font-size:17px;
+
+    letter-spacing:.5px;
+
+    padding:14px 20px;
+
+}
+
+.card-body{
+
+    padding:20px;
+
+}
+
+/*======================================================
+  FORM
+======================================================*/
+
+label{
+
+    font-weight:600;
+
+    margin-bottom:5px;
+
+}
+
+.form-control,
+.form-select{
+
+    border-radius:8px;
+
+    min-height:42px;
+
+}
+
+textarea.form-control{
+
+    resize:vertical;
+
+    min-height:90px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 0 .15rem rgba(13,110,253,.15);
+
+}
+
+/*======================================================
+  BUTTON
+======================================================*/
+
+.btn{
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    min-height:42px;
+
+}
+
+.btn i{
+
+    margin-right:5px;
+
+}
+
+/*======================================================
+  HEADER WARNA
+======================================================*/
+
+.bg-primary{
+
+    background:#0d6efd !important;
+
+}
+
+.bg-secondary{
+
+    background:#6c757d !important;
+
+}
+
+.bg-info{
+
+    background:#0dcaf0 !important;
+
+}
+
+.bg-warning{
+
+    background:#ffc107 !important;
+
+}
+
+.bg-success{
+
+    background:#198754 !important;
+
+}
+
+/*======================================================
+  JUDUL
+======================================================*/
+
+h4{
+
+    margin:0;
+
+    font-weight:bold;
+
+}
+
+/*======================================================
+  TOMBOL BAWAH
+======================================================*/
+
+.text-center .btn{
+
+    min-width:140px;
+
+    margin:5px;
+
+}
+
+/*======================================================
+  LOADING
+======================================================*/
+
+#loading{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.7);
+
+    z-index:9999;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border:8px solid #ddd;
+
+    border-top:8px solid #0d6efd;
+
+    border-radius:50%;
+
+    animation:putar 1s linear infinite;
+
+}
+
+@keyframes putar{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*======================================================
+  RESPONSIVE
+======================================================*/
+
+@media(max-width:768px){
+
+    .card-body{
+
+        padding:15px;
+
+    }
+
+    .card-header{
+
+        font-size:15px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-top:8px;
+
+    }
+
+}

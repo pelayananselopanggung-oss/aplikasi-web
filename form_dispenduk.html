@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Formulir Dispenduk</title>
+
+    <link
+        rel="stylesheet"
+        href="bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="fontawesome/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/form_dispenduk.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!--==================================================
+      CARD
+    ==================================================-->
+
+    <div class="card shadow">
+
+        <!--==================================================
+          HEADER
+        ==================================================-->
+
+        <div class="card-header bg-primary text-white">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <h4 class="mb-0">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    FORMULIR DISPENDUK
+
+                </h4>
+
+                <button
+                    class="btn btn-light btn-sm"
+                    onclick="kembali()">
+
+                    <i class="fa fa-arrow-left"></i>
+
+                    Kembali
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!--==================================================
+          BODY
+        ==================================================-->
+
+        <div class="card-body">
+
+            <!--==================================================
+  PENCARIAN
+==================================================-->
+
+<div class="row mb-3">
+
+    <div class="col-md-5">
+
+        <input
+
+            type="text"
+
+            id="cari"
+
+            class="form-control"
+
+            placeholder="Cari NIK / Nama / No KK"
+
+            onkeyup="cariPenduduk()">
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="input-group">
+
+            <span class="input-group-text">
+
+                Tampilkan
+
+            </span>
+
+            <select
+
+                id="perHalaman"
+
+                class="form-select"
+
+                onchange="gantiPerHalaman()">
+
+                <option value="10" selected>10</option>
+
+                <option value="20">20</option>
+
+                <option value="50">50</option>
+
+                <option value="100">100</option>
+
+                <option value="999999">Semua</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4 text-end">
+
+        <span
+
+            id="infoData"
+
+            class="fw-bold text-primary">
+
+            Menampilkan 0 data
+
+        </span>
+
+    </div>
+
+</div>
+
+            <!--==================================================
+              TABEL
+            ==================================================-->
+
+            <div class="table-responsive">
+
+                <table
+                    class="table table-bordered table-hover align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th width="60">
+
+                                No
+
+                            </th>
+
+                            <th width="120">
+
+                                Kode
+
+                            </th>
+
+                            <th>
+
+                                Nama Formulir
+
+                            </th>
+
+                            <th width="230">
+
+                                Aksi
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="dataForm">
+
+                        <!--
+                            Diisi otomatis oleh
+                            form_dispenduk.js
+                        -->
+
+                    </tbody>
+
+                </table>
+
+<!--==================================================
+  PAGINATION
+==================================================-->
+
+<div class="d-flex
+
+            justify-content-between
+
+            align-items-center
+
+            mt-3">
+
+    <div
+
+        id="infoHalaman"
+
+        class="text-muted">
+
+        Halaman 1 dari 1
+
+    </div>
+
+    <nav>
+
+        <ul
+
+            class="pagination
+
+                   pagination-sm
+
+                   mb-0"
+
+            id="pagination">
+
+        </ul>
+
+    </nav>
+
+</div>
+
+            </div>
+
+            <!--==================================================
+              PREVIEW PDF
+            ==================================================-->
+
+            <div class="mt-4">
+
+                <h5>
+
+                    <i
+                        class="fa-solid fa-file-pdf text-danger">
+
+                    </i>
+
+                    Preview Formulir
+
+                </h5>
+
+                <div class="pdf-viewer">
+
+                    <iframe
+
+                        id="viewerPdf"
+
+                        src="pdf/F101.pdf"
+
+                        width="100%"
+
+                        height="900"
+
+                        frameborder="0">
+
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/form_dispenduk.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Preview Permohonan Nikah</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/preview.css">
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="loading" class="loading" style="display:none;">
+
+    <div class="spinner"></div>
+
+
+</div>
+
+<div class="container my-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">
+                Preview Permohonan Nikah
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+           <!-- ========================= -->
+<!-- CALON SUAMI -->
+<!-- ========================= -->
+
+<h5 class="text-primary">Data Calon Suami</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikSuami"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaSuami"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlSuami"></td>
+</tr>
+
+<tr>
+<th>Jenis Kelamin</th>
+<td id="jenisKelaminSuami"></td>
+</tr>
+
+<tr>
+<th>Kewarganegaraan</th>
+<td id="kewarganegaraanSuami"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaSuami"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanSuami"></td>
+</tr>
+
+<tr>
+<th>Status Perkawinan</th>
+<td id="statusKawinSuami"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatSuami"></td>
+</tr>
+
+</table>
+
+<h5 class="text-secondary mt-4">
+Data Ayah Calon Suami
+</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikAyahSuami"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaAyahSuami"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlAyahSuami"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaAyahSuami"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanAyahSuami"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatAyahSuami"></td>
+</tr>
+
+</table>
+
+<h5 class="text-secondary mt-4">
+Data Ibu Calon Suami
+</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikIbuSuami"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaIbuSuami"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlIbuSuami"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaIbuSuami"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanIbuSuami"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatIbuSuami"></td>
+</tr>
+
+</table>
+
+            <!-- ========================= -->
+            <!-- CALON ISTRI -->
+            <!-- ========================= -->
+
+           <h5 class="text-danger mt-4">
+Data Calon Istri
+</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikIstri"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaIstri"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlIstri"></td>
+</tr>
+
+<tr>
+<th>Jenis Kelamin</th>
+<td id="jenisKelaminIstri"></td>
+</tr>
+
+<tr>
+<th>Kewarganegaraan</th>
+<td id="kewarganegaraanIstri"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaIstri"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanIstri"></td>
+</tr>
+
+<tr>
+<th>Status Perkawinan</th>
+<td id="statusKawinIstri"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatIstri"></td>
+</tr>
+
+</table>
+
+<h5 class="text-secondary mt-4">
+Data Ayah Calon Istri
+</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikAyahIstri"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaAyahIstri"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlAyahIstri"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaAyahIstri"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanAyahIstri"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatAyahIstri"></td>
+</tr>
+
+</table>
+
+<h5 class="text-secondary mt-4">
+Data Ibu Calon Istri
+</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th width="220">NIK</th>
+<td id="nikIbuIstri"></td>
+</tr>
+
+<tr>
+<th>Nama</th>
+<td id="namaIbuIstri"></td>
+</tr>
+
+<tr>
+<th>Tempat / Tanggal Lahir</th>
+<td id="ttlIbuIstri"></td>
+</tr>
+
+<tr>
+<th>Agama</th>
+<td id="agamaIbuIstri"></td>
+</tr>
+
+<tr>
+<th>Pekerjaan</th>
+<td id="pekerjaanIbuIstri"></td>
+</tr>
+
+<tr>
+<th>Alamat</th>
+<td id="alamatIbuIstri"></td>
+</tr>
+
+</table>
+
+
+            
+<!-- ========================= -->
+<!-- DATA AKAD -->
+<!-- ========================= -->
+
+<h5 class="text-success mt-4">
+    Data Akad Nikah
+</h5>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th width="220">Hari</th>
+        <td id="hariAkad"></td>
+    </tr>
+
+    <tr>
+        <th>Tanggal</th>
+        <td id="tanggalAkad"></td>
+    </tr>
+
+    <tr>
+        <th>Jam</th>
+        <td id="jamAkad"></td>
+    </tr>
+
+    <tr>
+        <th>Tempat</th>
+        <td id="tempatAkad"></td>
+    </tr>
+
+    <tr>
+        <th>Maskawin</th>
+        <td id="maskawin"></td>
+    </tr>
+
+    <tr>
+        <th>Nama KUA</th>
+        <td id="namaKua"></td>
+    </tr>
+
+    <tr>
+        <th>Kecamatan KUA</th>
+        <td id="kecamatanKua"></td>
+    </tr>
+
+    <tr>
+        <th>Kabupaten KUA</th>
+        <td id="kabupatenKua"></td>
+    </tr>
+
+</table>
+
+<hr>
+            </table>
+
+            <hr>
+
+            <h5>
+                Pilih Surat Yang Akan Dicetak
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n1Suami">
+
+                        <label class="form-check-label">
+
+                            N1 Calon Suami
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n1Istri">
+
+                        <label class="form-check-label">
+
+                            N1 Calon Istri
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n2">
+
+                        <label class="form-check-label">
+
+                            N2
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n4">
+
+                        <label class="form-check-label">
+
+                            N4
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n5Suami">
+
+                        <label class="form-check-label">
+
+                            N5 Orang Tua Suami
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n5Istri">
+
+                        <label class="form-check-label">
+
+                            N5 Orang Tua Istri
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="n6">
+
+                        <label class="form-check-label">
+
+                            N6
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="editSurat()">
+
+                    <i class="fas fa-edit"></i>
+
+                    Edit
+
+                </button>
+
+                <button
+                    id="btnSimpan"
+                    class="btn btn-success"
+                    onclick="simpanSurat()"
+                    style="display:none;">
+
+                    <i class="fas fa-save"></i>
+
+                    Simpan
+
+                </button>
+
+                 <button
+                     id="btnUpdate"
+                     class="btn btn-warning"
+                     onclick="updateSurat()"
+                     style="display:none;">
+
+                     <i class="fas fa-pen"></i>
+                    Update
+
+                </button>
+
+
+                <button
+                    id="btnCetak"
+                    class="btn btn-primary"
+                    onclick="cetakSurat()"
+                    disabled>
+
+                    <i class="fas fa-print"></i>
+
+                    Cetak
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/config.js"></script>
+<script src="js/preview_nikah.js"></script>
+
+</body>
+
+</html>

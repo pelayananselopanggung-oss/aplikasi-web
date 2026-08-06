@@ -1,0 +1,410 @@
+/*======================================================
+  CETAK NIKAH - MODEL N1
+======================================================*/
+
+@page{
+
+    size:210mm 330mm;
+
+    margin:6mm;
+
+}
+
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    margin:0;
+    padding:0;
+
+}
+
+body{
+
+    margin:0;
+
+    padding:20px 0;
+
+    background:#dcdcdc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    font-family:"Times New Roman", serif;
+
+    font-size:12pt;
+
+    line-height:1.2;
+
+}
+
+/*======================================================
+  HALAMAN
+======================================================*/
+
+.page{
+
+    width:198mm;
+
+    margin:0 auto;
+
+    background:#fff;
+
+    padding:6mm;
+
+    position:relative;
+
+}
+
+/*======================================================
+  HEADER
+======================================================*/
+
+.lampiran{
+
+    font-size:10pt;
+
+    line-height:1.35;
+
+}
+
+.judul{
+
+    text-align:center;
+
+    font-weight:bold;
+
+    font-size:14pt;
+
+}
+
+.model{
+
+    text-align:right;
+
+    font-weight:bold;
+
+    margin-top:5px;
+
+}
+
+.nomor{
+
+    text-align:center;
+
+    margin-top:6px;
+
+}
+
+/*======================================================
+  TABEL
+======================================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+td{
+
+    padding:0;
+
+    line-height:1;
+
+}
+
+
+
+p{
+
+    margin-bottom:4px;
+
+    line-height:1;
+
+}
+
+.header .label{
+
+    width:55mm;
+
+}
+
+/*=========================================
+IDENTITAS CALON
+=========================================*/
+
+.identitasUtama{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.identitasUtama .no{
+
+    width:10mm;
+
+}
+
+.identitasUtama .label{
+
+    width:70mm;
+
+}
+
+.identitasUtama td:nth-child(3){
+
+    width:5mm;
+
+}
+
+
+/*=========================================
+IDENTITAS ORANG TUA
+=========================================*/
+
+.identitasOrtu{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.identitasOrtu .label{
+
+    width:85mm;
+
+}
+
+.identitasOrtu td:nth-child(2){
+
+    width:5mm;
+
+}
+
+
+.identitasUtama td,
+.identitasOrtu td{
+
+    vertical-align: top;
+
+    text-align: left;
+
+}
+
+
+/*======================================================
+  IDENTITAS N2
+======================================================*/
+
+.identitasN2{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:5px;
+
+}
+
+.identitasN2 td{
+
+    border:none;
+
+    padding:2px 0;
+
+    vertical-align:top;
+
+}
+
+.identitasN2 .label{
+
+    width:50mm;
+
+}
+
+.identitasN2 .titik{
+
+    width:5mm;
+
+}
+
+/*======================================================
+  PARAGRAF
+======================================================*/
+
+p{
+
+    margin:2px 0;
+
+    line-height:1;
+
+}
+
+.penutup{
+
+    margin-top:5px;
+
+    text-align:justify;
+
+}
+
+/*======================================================
+  TANDA TANGAN
+======================================================*/
+
+.ttd{
+
+    margin-top:5px;
+
+}
+
+.ttd td{
+
+    text-align:center;
+
+}
+
+#namaPejabat{
+
+    text-transform:uppercase;
+
+}
+
+#nipPejabat{
+
+    font-size:11pt;
+
+}
+
+/*======================================================
+  QR
+======================================================*/
+
+.qr{
+
+    position:fixed;
+
+    left:6mm;
+
+    bottom:7mm;
+
+    text-align:center;
+
+    font-size:9pt;
+
+}
+
+.qr img{
+
+    width:25mm;
+
+    height:25mm;
+
+}
+
+/*======================================================
+  TOOLBAR
+======================================================*/
+
+.toolbar{
+
+    position:fixed;
+
+    top:15px;
+
+    right:15px;
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.toolbar button{
+
+    padding:8px 16px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:4px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.toolbar button:last-child{
+
+    background:#6c757d;
+
+}
+
+/*======================================================
+  PRINT
+======================================================*/
+
+@media print{
+
+    @page{
+
+        size:210mm 330mm;
+
+        margin:6mm;
+
+    }
+
+    html,
+    body{
+
+        width:210mm;
+
+        margin:0;
+
+        padding:0;
+
+        background:#fff;
+
+    }
+
+    .toolbar,
+    .no-print{
+
+        display:none !important;
+
+    }
+
+    .page{
+
+        width:198mm;
+
+        margin:0 auto;
+
+        padding:0;
+
+        background:#fff;
+
+        box-shadow:none;
+
+    }
+
+}

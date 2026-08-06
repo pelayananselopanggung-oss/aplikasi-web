@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Cetak N2</title>
+
+    <link
+        rel="stylesheet"
+        href="css/cetak_nikah.css">
+
+</head>
+
+<body>
+
+    <!--==============================================
+        HALAMAN CETAK
+    ==============================================-->
+
+    <div class="page">
+
+        <!--==========================================
+            LAMPIRAN
+        ==========================================-->
+
+        <div class="lampiran">
+
+            LAMPIRAN V<br>
+            KEPUTUSAN DIREKTUR JENDERAL BIMBINGAN MASYARAKAT ISLAM<br>
+            NOMOR 473 TAHUN 2020<br>
+            TENTANG<br>
+            PETUNJUK TEKNIS PELAKSANAAN PENCATATAN PERNIKAHAN
+
+        </div>
+
+        <br>
+
+        <!--==========================================
+            JUDUL
+        ==========================================-->
+
+        <div
+            class="judul"
+            id="judulSurat">
+
+        </div>
+
+        <div
+            class="model"
+            id="modelSurat">
+
+        </div>
+
+        <br>
+
+        
+
+        <!--==========================================
+            ISI SURAT
+        ==========================================-->
+
+        <div id="isiSurat"></div>
+
+        <!--==========================================
+            TANDA TANGAN
+        ==========================================-->
+
+        <table class="ttd">
+
+            <tr>
+
+                <td
+                    style="width:50%;"
+                    class="text-center">
+
+                    Diterima tanggal,<br>
+
+                    Yang menerima,<br>
+
+                    Kepala KUA/PPN LN
+
+                    <br><br><br><br><br>
+
+                    <b>
+
+                        <u>
+
+                            ....................................
+
+                        </u>
+
+                    </b>
+
+                </td>
+
+                <td
+                    style="width:50%;"
+                    class="text-center">
+
+                    Wassalam,
+
+                    <br>
+
+                    Pemohon
+
+                    <br><br><br><br><br>
+
+                    <b>
+
+                        <u id="namaPemohon"></u>
+
+                    </b>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!--==============================================
+        QR
+    ==============================================-->
+
+    <div class="qr">
+
+        <img
+            id="qrCode"
+            width="110">
+
+        <div>
+
+            Scan Verifikasi
+
+        </div>
+
+    </div>
+
+    <!--==============================================
+        TOOLBAR
+    ==============================================-->
+
+    <div class="toolbar no-print">
+
+        <button onclick="window.print()">
+
+            Cetak
+
+        </button>
+
+        <button onclick="kembali()">
+
+            Kembali
+
+        </button>
+
+    </div>
+
+    <!--==============================================
+        SCRIPT
+    ==============================================-->
+
+    <script src="js/config.js"></script>
+
+<script src="js/preview_nikah.js"></script>
+    <script src="js/cetak_n2.js"></script>
+
+</body>
+
+</html>

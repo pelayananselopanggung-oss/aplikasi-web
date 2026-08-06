@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Penduduk Luar Daerah</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/luardaerah.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-primary shadow">
+
+<div class="container-fluid">
+
+<button
+class="btn btn-light"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+</button>
+
+<span class="navbar-brand mx-auto">
+
+PENDUDUK LUAR DAERAH
+
+</span>
+
+</div>
+
+</nav>
+
+<!-- HEADER -->
+
+<div class="container mt-4">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h5 class="text-primary">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Permohonan Surat Untuk Penduduk Luar Daerah
+
+</h5>
+
+<hr>
+
+<div class="mb-2">
+
+<b>NIK Pemohon</b>
+
+</div>
+
+<input
+type="text"
+id="nik"
+class="form-control"
+readonly>
+
+<small class="text-muted">
+
+NIK dibawa otomatis dari halaman Permohonan.
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MENU -->
+
+<div class="container mt-4">
+
+<div class="row">
+
+<!-- DOMISILI -->
+
+<div class="col-md-6 mb-4">
+
+<div
+class="card shadow menu-card h-100"
+onclick="domisili()">
+
+<div class="card-body text-center">
+
+<i class="fa-solid fa-house fa-4x text-success mb-3"></i>
+
+<h4>
+
+Surat Keterangan Domisili
+
+</h4>
+
+<p>
+
+Untuk penduduk luar daerah yang
+bertempat tinggal di Desa Selopanggung.
+
+</p>
+
+<button
+class="btn btn-success">
+
+Pilih
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- KENDARAAN -->
+
+<div class="col-md-6 mb-4">
+
+<div
+class="card shadow menu-card h-100"
+onclick="kendaraan()">
+
+<div class="card-body text-center">
+
+<i class="fa-solid fa-motorcycle fa-4x text-primary mb-3"></i>
+
+<h4>
+
+Surat Kendaraan Bermotor
+
+</h4>
+
+<p>
+
+Permohonan surat kendaraan
+bermotor milik penduduk luar daerah.
+
+</p>
+
+<button
+class="btn btn-primary">
+
+Pilih
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="container mb-5">
+
+<div class="d-grid">
+
+<button
+class="btn btn-secondary btn-lg"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+
+Kembali
+
+</button>
+
+</div>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/offline/db.js"></script>
+<script src="js/luardaerah.js"></script>
+
+
+</body>
+</html>

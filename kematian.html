@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Surat Keterangan Kematian</title>
+
+    <!-- Bootstrap -->
+    <link
+        rel="stylesheet"
+        href="bootstrap/css/bootstrap.min.css"
+    >
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="css/kematian.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container py-3">
+
+    <!--==================================================
+        JUDUL
+    ===================================================-->
+
+    <div class="card shadow-sm mb-3">
+
+        <div class="card-header bg-dark text-white">
+
+            <h5 class="mb-0">
+
+                <i class="fas fa-hands-praying me-2"></i>
+
+                SURAT KETERANGAN KEMATIAN
+
+            </h5>
+
+        </div>
+
+    </div>
+
+    <!--==================================================
+        DATA PENDUDUK
+    ===================================================-->
+
+    <div class="card shadow-sm mb-3">
+
+        <div class="card-header">
+
+            <strong>
+
+                <i class="fas fa-user me-2"></i>
+
+                DATA PENDUDUK
+
+            </strong>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- NIK -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        NIK
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nik"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Nama -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Nama
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Tempat Lahir -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Tempat Lahir
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tempatlahir"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Tanggal Lahir -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Tanggal Lahir
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tanggallahir"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Jenis Kelamin -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Jenis Kelamin
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="jk"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Agama -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Agama
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="agama"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Pekerjaan -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Pekerjaan
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pekerjaan"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Status Perkawinan -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Status Perkawinan
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="sp"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Alamat -->
+
+                <div class="col-12 mb-3">
+
+                    <label class="form-label">
+
+                        Alamat
+
+                    </label>
+
+                    <textarea
+                        id="alamat"
+                        class="form-control"
+                        rows="2"
+                        readonly
+                    ></textarea>
+
+                </div>
+
+                <!-- RT -->
+
+                <div class="col-md-2 mb-3">
+
+                    <label class="form-label">
+
+                        RT
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rt"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- RW -->
+
+                <div class="col-md-2 mb-3">
+
+                    <label class="form-label">
+
+                        RW
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rw"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Desa -->
+
+                <div class="col-md-4 mb-3">
+
+                    <label class="form-label">
+
+                        Desa
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="desa"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Kecamatan -->
+
+                <div class="col-md-4 mb-3">
+
+                    <label class="form-label">
+
+                        Kecamatan
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kecamatan"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Kabupaten -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Kabupaten
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kabupaten"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+                <!-- Provinsi -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Provinsi
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="provinsi"
+                        class="form-control"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!--==================================================
+        DATA KEMATIAN
+    ===================================================-->
+
+    <div class="card shadow-sm mb-3">
+
+        <div class="card-header">
+
+            <strong>
+
+                <i class="fas fa-book-dead me-2"></i>
+
+                DATA KEMATIAN
+
+            </strong>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- Hari Kematian -->
+
+                <div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Hari Kematian
+
+    </label>
+
+    <input
+        type="text"
+        id="harikematian"
+        class="form-control"
+        readonly
+    >
+
+</div>
+
+                <!-- Tanggal Kematian -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+
+                        Tanggal Kematian
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="tanggalkematian"
+                        class="form-control"
+                    >
+
+                </div>
+
+                <!-- Tempat Kematian -->
+
+                <div class="col-md-12 mb-3">
+
+                    <label class="form-label">
+
+                        Tempat Kematian
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tempatkematian"
+                        class="form-control"
+                        placeholder="Masukkan tempat meninggal"
+                    >
+
+                </div>
+
+                <!-- Sebab Kematian -->
+
+                <div class="col-md-12 mb-3">
+
+                    <label class="form-label">
+
+                        Sebab Kematian
+
+                    </label>
+
+                    <textarea
+                        id="sebabkematian"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Masukkan sebab kematian"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--==================================================
+        TOMBOL
+    ===================================================-->
+
+    <div class="d-flex justify-content-between mb-4">
+
+        <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="kembali()"
+        >
+
+            <i class="fas fa-arrow-left me-2"></i>
+
+            Kembali
+
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-primary"
+            onclick="previewSurat()"
+        >
+
+            <i class="fas fa-eye me-2"></i>
+
+            Preview
+
+        </button>
+
+    </div>
+
+</div>
+
+<!--==================================================
+    JAVASCRIPT
+===================================================-->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/kematian.js"></script>
+
+</body>
+
+</html>

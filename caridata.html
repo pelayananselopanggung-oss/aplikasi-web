@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cari Data Penduduk</title>
+
+<link rel="manifest" href="manifest.json">
+
+ <meta name="theme-color" content="#198754">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/caridata.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+
+<div class="container">
+
+<a class="navbar-brand">
+
+<i class="fa-solid fa-users"></i>
+
+Cari Data Penduduk
+
+</a>
+
+<div>
+
+<button
+class="btn btn-light"
+onclick="kembaliDashboard()">
+
+<i class="fa-solid fa-house"></i>
+
+
+</button>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- CONTENT -->
+
+<div class="container mt-4">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-10">
+
+<input
+type="text"
+id="txtCari"
+class="form-control form-control-lg"
+placeholder="Masukkan NIK atau Nama Penduduk">
+
+</div>
+
+<div class="col-md-2 d-grid">
+
+<button
+id="btnCari"
+class="btn btn-primary btn-lg">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Cari
+
+</button>
+
+</div>
+
+</div>
+
+<div class="mt-3">
+
+<span
+id="labelStatus"
+class="status-info">
+
+Silakan masukkan NIK atau Nama.
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HASIL -->
+
+<div class="card shadow mt-4">
+
+<div class="card-header bg-primary text-white">
+
+<h5>
+
+<i class="fa-solid fa-list"></i>
+
+Hasil Pencarian
+
+</h5>
+
+</div>
+
+<div class="card-body p-0">
+
+<div class="table-responsive">
+
+<table class="table table-hover table-striped mb-0">
+
+<thead class="table-primary">
+
+<tr>
+
+<th width="18%">NIK</th>
+
+<th width="25%">Nama</th>
+
+<th width="15%">Jenis Kelamin</th>
+
+<th width="30%">Alamat</th>
+
+<th width="12%" class="text-center">
+
+Aksi
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="hasilCari">
+
+<tr>
+
+<td colspan="5" class="text-center text-muted p-4">
+
+Belum ada pencarian.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TOMBOL TAMBAH -->
+
+<div class="text-center mt-4">
+
+<button
+
+id="btnTambah"
+
+class="btn btn-success btn-lg"
+
+style="display:none;">
+
+<i class="fa-solid fa-plus"></i>
+
+Tambah Data Penduduk
+
+</button>
+
+</div>
+
+</div>
+
+<!-- MODAL LOADING -->
+
+<div
+class="modal fade"
+id="loadingModal"
+data-bs-backdrop="static"
+data-bs-keyboard="false">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-body text-center p-5">
+
+<div class="spinner-border text-primary mb-3">
+
+</div>
+
+<h5>
+
+Sedang mencari data...
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Bootstrap -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Javascript -->
+<script src="js/offline/db.js"></script>
+<script src="js/caridata.js"></script>
+
+
+</body>
+
+</html>

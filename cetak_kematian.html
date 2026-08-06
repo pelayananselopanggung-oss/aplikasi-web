@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+
+<title>
+
+    Cetak Surat Kematian
+
+</title>
+
+<link
+    rel="manifest"
+    href="manifest.json">
+
+<meta
+    name="theme-color"
+    content="#198754">
+
+<link
+    href="bootstrap/css/bootstrap.min.css"
+    rel="stylesheet">
+
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    rel="stylesheet">
+
+<link
+    rel="stylesheet"
+    href="css/cetak_kematian.css">
+
+</head>
+
+<body>
+
+<div class="surat-preview">
+
+    <!--====================================
+        JUDUL
+    =====================================-->
+
+    <div class="judul-surat">
+
+        <div class="untuk-bersangkutan">
+
+            UNTUK YANG BERSANGKUTAN
+
+        </div>
+
+        <div class="nama-surat">
+
+            SURAT KEMATIAN
+
+        </div>
+
+        <div id="nomorsurat">
+
+            Nomor :
+
+        </div>
+
+    </div>
+
+    <!--====================================
+        ISI SURAT
+    =====================================-->
+
+    <p>
+
+        Yang bertanda tangan di bawah ini menerangkan bahwa :
+
+    </p>
+
+    <table class="tabel-surat">
+
+        <tr>
+
+            <td width="120">
+
+                Nama
+
+            </td>
+
+            <td width="10">
+
+                :
+
+            </td>
+
+            <td id="nama"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                Jenis Kelamin
+
+            </td>
+
+            <td>
+
+                :
+
+            </td>
+
+            <td id="jk"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                Alamat
+
+            </td>
+
+            <td>
+
+                :
+
+            </td>
+
+            <td id="alamat"></td>
+
+        </tr>
+
+    </table>
+
+    <br>
+
+    <p>
+
+        Telah meninggal dunia pada :
+
+    </p>
+
+    <table class="tabel-surat">
+
+        <tr>
+
+            <td width="120">
+
+                Hari
+
+            </td>
+
+            <td width="10">
+
+                :
+
+            </td>
+
+            <td id="harikematian"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                Tanggal
+
+            </td>
+
+            <td>
+
+                :
+
+            </td>
+
+            <td id="tanggalkematian"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                Di
+
+            </td>
+
+            <td>
+
+                :
+
+            </td>
+
+            <td id="tempatkematian"></td>
+
+        </tr>
+
+    </table>
+
+    <br>
+
+    <p>
+
+        Disebabkan karena :
+
+        <strong id="sebabkematian"></strong>
+
+    </p>
+
+    <br>
+
+    <p>
+
+        Demikian surat keterangan ini dibuat dengan sebenarnya agar dapat dipergunakan sebagaimana mestinya.
+
+    </p>
+
+    <!--====================================
+        TANDA TANGAN
+    =====================================-->
+
+    <br><br>
+
+    <table class="ttd">
+
+        <tr>
+
+            <td></td>
+
+            <td>
+
+                <span id="tanggalSurat"></span>
+
+                <br>
+
+                <span id="jabatanTtd">
+
+                    KEPALA DESA SELOPANGGUNG
+
+                </span>
+
+                <br><br><br><br><br>
+
+                <strong
+                    id="namaPejabat"
+                    style="text-decoration:underline;"
+                ></strong>
+
+                <br>
+
+                <span id="nipPejabat"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<!-- ================================= -->
+<!-- QR CODE -->
+<!-- ================================= -->
+
+<div id="qrContainer">
+
+    <img
+        id="imgQR"
+        src=""
+        alt="QR Verifikasi">
+
+    <div
+        id="offlineQR"
+        class="offlineQR">
+    </div>
+
+    <div class="qrText">
+        QR Verifikasi
+    </div>
+
+    <div
+        id="offlineInfo"
+        class="offlineInfo">
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="no-print text-center mt-4">
+
+    <button
+        class="btn btn-success"
+        onclick="cetakSurat()">
+
+        <i class="fa fa-print"></i>
+
+        Cetak
+
+    </button>
+
+   
+    <div
+        style="
+        margin-top:15px;
+        color:#d9534f;
+        ">
+
+        <b>Catatan :</b>
+
+        Agar hasil PDF rapi,
+        pada dialog Cetak nonaktifkan
+        <b>Headers and Footers</b>,
+        kemudian pilih
+        <b>Save as PDF</b>.
+
+    </div>
+
+</div>
+
+
+<!--====================================
+    SCRIPT
+=====================================-->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+
+<script src="js/tandatangan.js"></script>
+
+<script src="js/cetak_kematian.js"></script>
+
+</body>
+
+</html>

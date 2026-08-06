@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Surat Keterangan Kepemilikan Kendaraan Bermotor</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#198754">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/ranmor.css">
+
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- NAVBAR -->
+<!-- ================================= -->
+
+<nav class="navbar navbar-dark bg-success shadow">
+
+<div class="container-fluid">
+
+<button class="btn btn-light" onclick="kembali()">
+<i class="fa fa-arrow-left"></i>
+</button>
+
+<span class="navbar-brand mx-auto">
+SURAT KETERANGAN KEPEMILIKAN KENDARAAN BERMOTOR
+</span>
+
+</div>
+
+</nav>
+
+<!-- ================================= -->
+<!-- DATA KENDARAAN -->
+<!-- ================================= -->
+
+<div class="container mt-3">
+
+<div class="card shadow">
+
+<div class="card-header bg-success text-white">
+
+<b>DATA KENDARAAN</b>
+
+</div>
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Nomor Polisi
+</label>
+
+<input
+type="text"
+id="nopol"
+class="form-control"
+placeholder="Contoh : AG 1234 XX">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Nama Pemilik
+</label>
+
+<input
+type="text"
+id="namaPemilik"
+class="form-control">
+
+</div>
+
+<div class="col-12 mb-3">
+
+<label class="form-label">
+Alamat Pemilik
+</label>
+
+<textarea
+id="alamatPemilik"
+class="form-control"
+rows="3"></textarea>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Merk
+</label>
+
+<input
+type="text"
+id="merk"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Type
+</label>
+
+<input
+type="text"
+id="type"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Jenis
+</label>
+
+<input
+type="text"
+id="jenis"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Model
+</label>
+
+<input
+type="text"
+id="model"
+class="form-control">
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<label class="form-label">
+Tahun Pembuatan
+</label>
+
+<input
+type="number"
+id="tahunPembuatan"
+class="form-control">
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<label class="form-label">
+Isi Silinder (CC)
+</label>
+
+<input
+type="text"
+id="isiSilinder"
+class="form-control">
+
+</div>
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Nomor Rangka
+</label>
+
+<input
+type="text"
+id="nomorRangka"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Nomor Mesin
+</label>
+
+<input
+type="text"
+id="nomorMesin"
+class="form-control">
+
+</div>
+
+<div class="col-12 mb-3">
+
+<label class="form-label">
+Keperluan Surat
+</label>
+
+<textarea
+id="keperluan"
+class="form-control"
+rows="3"
+placeholder="Contoh : Persyaratan Administrasi"></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- IDENTITAS PEMOHON -->
+<!-- ================================= -->
+
+<div class="container mt-3">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<b>IDENTITAS PEMOHON</b>
+
+</div>
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+NIK
+</label>
+
+<input
+type="text"
+id="nik"
+class="form-control"
+readonly>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Nama Lengkap
+</label>
+
+<input
+type="text"
+id="nama"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Tempat Lahir
+</label>
+
+<input
+type="text"
+id="tempatlahir"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Tanggal Lahir
+</label>
+
+<input
+type="date"
+id="tanggallahir"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Jenis Kelamin
+</label>
+
+<select
+id="jk"
+class="form-select">
+
+<option value="">Pilih</option>
+<option>Laki-Laki</option>
+<option>Perempuan</option>
+
+</select>
+
+</div>
+
+
+<div class="col-12 mb-3">
+
+<label class="form-label">
+Alamat
+</label>
+
+<textarea
+id="alamat"
+class="form-control"
+rows="3"></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- TOMBOL -->
+<!-- ================================= -->
+
+<div class="container mt-4 mb-5">
+
+<div class="row">
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-secondary w-100"
+onclick="kembali()">
+
+<i class="fa fa-arrow-left"></i>
+Kembali
+
+</button>
+
+</div>
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-warning w-100"
+onclick="resetForm()">
+
+<i class="fa fa-rotate-left"></i>
+Reset
+
+</button>
+
+</div>
+
+<div class="col-md-4 mb-2">
+
+<button
+class="btn btn-success w-100"
+onclick="previewSurat()">
+
+<i class="fa fa-file-lines"></i>
+Preview Surat
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- LOADING -->
+<!-- ================================= -->
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+<div class="spinner-border text-success">
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- BOOTSTRAP -->
+<!-- ================================= -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ================================= -->
+<!-- CONFIG -->
+<!-- ================================= -->
+
+<script src="js/config.js"></script>
+
+<!-- ================================= -->
+<!-- RANMOR -->
+<!-- ================================= -->
+<script src="js/offline/db.js"></script>
+<script src="js/ranmor.js"></script>
+
+
+</body>
+</html>

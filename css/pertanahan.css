@@ -1,0 +1,338 @@
+/*======================================================
+BODY
+======================================================*/
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#F8F5F2;
+
+}
+
+
+/*======================================================
+HEADER
+======================================================*/
+
+.header{
+
+    background:linear-gradient(135deg,#5D4037,#8D6E63);
+
+    color:#FFFFFF;
+
+    padding:25px 20px;
+
+    border-radius:0 0 25px 25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+
+}
+
+.header h3{
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+.operator{
+
+    margin-top:8px;
+
+    font-size:15px;
+
+    opacity:.95;
+
+}
+
+
+/*======================================================
+CONTAINER
+======================================================*/
+
+.container{
+
+    margin-top:35px;
+
+}
+
+
+/*======================================================
+MENU CARD
+======================================================*/
+
+.menu-card{
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#FFFFFF;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    height:190px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 15px rgba(93,64,55,.15);
+
+    border:1px solid #D7CCC8;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 30px rgba(93,64,55,.30);
+
+    border-color:#8D6E63;
+
+}
+
+.menu-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.menu-card i{
+
+    font-size:56px;
+
+    color:#6D4C41;
+
+    margin-bottom:18px;
+
+    transition:.25s;
+
+}
+
+.menu-card:hover i{
+
+    transform:scale(1.08);
+
+    color:#4E342E;
+
+}
+
+.menu-card h5{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#4E342E;
+
+    margin-bottom:8px;
+
+}
+
+.menu-card p{
+
+    color:#6D6D6D;
+
+    font-size:14px;
+
+    margin:0;
+
+    line-height:1.5;
+
+}
+
+
+/*======================================================
+ALERT
+======================================================*/
+
+.alert{
+
+    border-radius:15px;
+
+}
+
+.alert-info{
+
+    background:#EFEBE9;
+
+    border:1px solid #D7CCC8;
+
+    color:#5D4037;
+
+}
+
+
+/*======================================================
+BUTTON
+======================================================*/
+
+.btn{
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    padding:10px 30px;
+
+}
+
+.btn-secondary{
+
+    background:#6D4C41;
+
+    border-color:#6D4C41;
+
+}
+
+.btn-secondary:hover{
+
+    background:#4E342E;
+
+    border-color:#4E342E;
+
+}
+
+
+/*======================================================
+FOOTER
+======================================================*/
+
+.footer{
+
+    margin-top:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+/*======================================================
+ANIMATION
+======================================================*/
+
+.menu-card{
+
+    animation:fadeMenu .35s ease;
+
+}
+
+@keyframes fadeMenu{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*======================================================
+RESPONSIVE TABLET
+======================================================*/
+
+@media (max-width:991px){
+
+    .menu-card{
+
+        height:175px;
+
+    }
+
+}
+
+
+/*======================================================
+RESPONSIVE MOBILE
+======================================================*/
+
+@media (max-width:768px){
+
+    .header{
+
+        padding:20px 15px;
+
+    }
+
+    .header h3{
+
+        font-size:24px;
+
+    }
+
+    .operator{
+
+        font-size:14px;
+
+    }
+
+    .container{
+
+        margin-top:20px;
+
+    }
+
+    .menu-card{
+
+        height:160px;
+
+    }
+
+    .menu-card i{
+
+        font-size:46px;
+
+        margin-bottom:12px;
+
+    }
+
+    .menu-card h5{
+
+        font-size:18px;
+
+    }
+
+    .menu-card p{
+
+        font-size:13px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}

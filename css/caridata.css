@@ -1,0 +1,339 @@
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background:#f5f7fa;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    height:65px;
+
+}
+
+.navbar-brand{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.navbar .btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    border-radius:15px 15px 0 0 !important;
+
+    font-weight:bold;
+
+}
+
+/* =====================================================
+   TEXTBOX
+===================================================== */
+
+.form-control{
+
+    height:50px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:0 0 10px rgba(13,110,253,.25);
+
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
+
+.btn-primary{
+
+    height:50px;
+
+}
+
+#btnTambah{
+
+    width:260px;
+
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+#labelStatus{
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table{
+
+    margin:0;
+
+}
+
+.table thead{
+
+    background:#0d6efd;
+
+    color:white;
+
+}
+
+.table tbody tr{
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#dbeafe;
+
+    transform:scale(1.01);
+
+}
+
+/* =====================================================
+   KOLOM
+===================================================== */
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+.table td:nth-child(1){
+
+    font-weight:bold;
+
+}
+
+.table td:nth-child(2){
+
+    font-weight:600;
+
+}
+
+.table td:nth-child(3){
+
+    text-align:center;
+
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.spinner-border{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+/* =====================================================
+   RESPONSIVE TABLE
+===================================================== */
+
+.table-responsive{
+
+    max-height:500px;
+
+    overflow:auto;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+
+        font-size:18px;
+
+    }
+
+    .form-control{
+
+        margin-bottom:10px;
+
+    }
+
+    #btnTambah{
+
+        width:100%;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media(min-width:992px){
+
+    .container{
+
+        max-width:1100px;
+
+    }
+
+}
+
+/* =====================================================
+   ANIMASI CARD
+===================================================== */
+
+.card{
+
+    animation:fadeIn .4s;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   WARNA STATUS
+===================================================== */
+
+.status-info{
+
+    color:#0d6efd;
+
+}
+
+.status-success{
+
+    color:#198754;
+
+}
+
+.status-danger{
+
+    color:#dc3545;
+
+}
+
+/* =====================================================
+   HOVER BUTTON
+===================================================== */
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    transition:.2s;
+
+}
+
+/* =====================================================
+   TABEL KOSONG
+===================================================== */
+
+.table tbody td{
+
+    padding:18px;
+
+}
+
+/* =====================================================
+   FOOTER (OPSIONAL)
+===================================================== */
+
+.footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+}

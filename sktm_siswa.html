@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>SKTM Siswa</title>
+
+    <link
+        rel="stylesheet"
+        href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/sktm_siswa.css">
+
+</head>
+
+<body>
+
+    <!--==========================================
+        LOADING
+    ==========================================-->
+
+    <div id="loading"
+    class="position-fixed top-0 start-0 w-100 h-100 justify-content-center align-items-center"
+    style="
+        background:rgba(255,255,255,.8);
+        display:none;
+        z-index:9999;
+    ">
+
+    <div class="spinner-border text-primary"></div>
+
+</div>
+
+
+    <!--==========================================
+        CONTAINER
+    ==========================================-->
+
+    <div class="container mt-4 mb-5">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+
+                <h4 class="mb-0">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    SURAT KETERANGAN TIDAK MAMPU SISWA
+
+                </h4>
+
+            </div>
+
+            <div class="card-body">
+
+
+                <!--==========================================
+                    DATA SISWA
+                ==========================================-->
+
+                <h5 class="border-bottom pb-2 mb-3">
+
+                    Data Siswa
+
+                </h5>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            NIK Siswa
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nikSiswa"
+                            readonly>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Nama Siswa
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="namaSiswa"
+                            readonly>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Tempat Lahir
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="tempatLahirSiswa"
+                            readonly>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Tanggal Lahir
+
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            id="tanggalLahirSiswa"
+                            readonly>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+
+                            Jenis Kelamin
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="jkSiswa"
+                            readonly>
+
+                    </div>
+
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+
+                            NISN
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nisn"
+                            placeholder="Masukkan NISN">
+
+                    </div>
+
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+
+                            Kelas
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="kelas"
+                            placeholder="Contoh : VII A">
+
+                    </div>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Nama Sekolah
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="sekolah"
+                        placeholder="Nama Sekolah">
+
+                </div>
+
+                <!--==========================================
+                    PEMOHON
+                ==========================================-->
+
+                <h5 class="border-bottom pb-2 mt-4 mb-3">
+
+                    Data Pemohon
+
+                </h5>
+
+                <div class="mb-3">
+
+                    <div class="form-check form-check-inline">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="pemohon"
+                            id="ayah"
+                            value="AYAH"
+                            checked
+                            onclick="isiOrangTua('AYAH')">
+
+                        <label class="form-check-label">
+
+                            Ayah
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check form-check-inline">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="pemohon"
+                            id="ibu"
+                            value="IBU"
+                            onclick="isiOrangTua('IBU')">
+
+                        <label class="form-check-label">
+
+                            Ibu
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!--==========================================
+                    DATA ORANG TUA
+                ==========================================-->
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            NIK Orang Tua
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nikOrtu"
+                            readonly>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Nama Orang Tua
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="namaOrtu"
+                            readonly>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Tempat Lahir
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="tempatLahirOrtu"
+                            readonly>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Tanggal Lahir
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="tanggalLahirOrtu"
+                            readonly>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+    <label class="form-label">
+
+        Jenis Kelamin
+
+    </label>
+
+    <input
+        type="text"
+        class="form-control"
+        id="jkOrtu"
+        readonly>
+
+</div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Agama
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="agamaOrtu"
+                            readonly>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Pekerjaan
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="pekerjaanOrtu"
+                            readonly>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Alamat
+
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="alamatOrtu"
+                        rows="3"
+                        readonly></textarea>
+
+                </div>
+
+
+                <!--==========================================
+                    DATA TAMBAHAN
+                ==========================================-->
+
+                <h5 class="border-bottom pb-2 mt-4 mb-3">
+
+                    Data Tambahan
+
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+    <label class="form-label">
+        Desil
+    </label>
+
+    <input
+        type="text"
+        class="form-control"
+        id="desil"
+        placeholder="Masukkan Desil">
+
+</div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Keperluan
+
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="keperluan"
+                        rows="4"
+                        placeholder="Masukkan keperluan"></textarea>
+
+                </div>
+
+
+                <!--==========================================
+                    TOMBOL
+                ==========================================-->
+
+                <div class="text-center mt-4">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="kembali()">
+
+                        <i class="fa fa-arrow-left"></i>
+
+                        Kembali
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-warning"
+                        onclick="resetForm()">
+
+                        <i class="fa fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        onclick="previewSurat()">
+
+                        <i class="fa fa-eye"></i>
+
+                        Preview
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/sktm_siswa.js"></script>
+
+</body>
+
+</html>
